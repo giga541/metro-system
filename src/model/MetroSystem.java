@@ -10,6 +10,8 @@ public class MetroSystem {
     private Passenger passenger2;
     private Line line1;
     private Line line2;
+    private Ticket ticket1;
+    private Ticket ticket2;
 
     public Train getTrain1() { return train1; }
     public void setTrain1(Train train1) { this.train1 = train1; }
@@ -34,4 +36,10 @@ public class MetroSystem {
 
     public Line getLine2() { return line2; }
     public void setLine2(Line line2) { this.line2 = line2; }
+
+    public Ticket getTicket1() { return ticket1; }
+    public void setTicket1(Ticket ticket1) { this.ticket1 = ticket1; }
+
+    public Ticket getTicket2() { return ticket2; }
+    public void setTicket2(Ticket ticket2) { this.ticket2 = ticket2; }
 }

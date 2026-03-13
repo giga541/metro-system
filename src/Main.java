@@ -37,6 +37,7 @@ public class Main {
         System.out.println(ticket.getPrice());
         System.out.println(ticket.getPurchaseTime());
 
+
         Booking booking = new Booking();
         booking.bookTicket(passenger1, train1, ticket);
 
@@ -71,5 +72,14 @@ public class Main {
         System.out.println("Station 1: " + metro.getStation1().getLocation());
         System.out.println("Station 2: " + metro.getStation2().getLocation());
         System.out.println(Driver.getTotalDrivers());
+
+        metro.setTicket1(ticket);
+        Ticket ticket2 = new Ticket();
+        ticket2.setPrice(new BigDecimal("3.50"));
+        ticket2.setPurchaseTime(LocalDateTime.now());
+        metro.setTicket2(ticket2);
+
+        System.out.println("Ticket 1 price: " + metro.getTicket1().getPrice());
+        System.out.println("Ticket 2 price: " + metro.getTicket2().getPrice());
     }
 }
