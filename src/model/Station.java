@@ -1,6 +1,6 @@
 package model;
 
-// Version A - conflict branch
+// Version A and B merged
 public class Station {
 
     private String name;
