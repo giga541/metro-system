@@ -5,8 +5,6 @@ import java.time.LocalDateTime;
 
 public class Ticket {
 
-    private Ticket ticket;
-
     private BigDecimal price;
     private LocalDateTime purchaseTime;
 

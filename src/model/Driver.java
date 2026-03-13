@@ -2,29 +2,25 @@ package model;
 
 public class Driver {
 
-    private Driver driver;
+    private static int totalDrivers = 0;
 
+    private int driverId;
     private String driverName;
-    private static int driverId;
 
     static {
-        driverId = 107;
-        System.out.println("model.Driver system initialized");
+        totalDrivers = 0;
+        System.out.println("Driver class initialized");
     }
 
-    public String getDriverName() {
-        return driverName;
+    public Driver() {
+        totalDrivers++;
+        this.driverId = totalDrivers;
     }
 
-    public void setDriverName(String driverName) {
-        this.driverName = driverName;
-    }
+    public static int getTotalDrivers() { return totalDrivers; }
 
-    public static int getDriverId() {
-        return driverId;
-    }
+    public int getDriverId() { return driverId; }
 
-    public static void setDriverId(int driverId) {
-        Driver.driverId = driverId;
-    }
+    public String getDriverName() { return driverName; }
+    public void setDriverName(String driverName) { this.driverName = driverName; }
 }

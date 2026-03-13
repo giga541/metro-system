@@ -6,8 +6,6 @@ package model;
 
 public class Payment {
 
-    private Payment payment;
-
     private String cardNumber;
 
     public String getCardNumber() {
