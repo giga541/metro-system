@@ -1,5 +1,6 @@
 package model;
 
+// Station class - handles metro station data
 public class Station {
 
     private String name;
