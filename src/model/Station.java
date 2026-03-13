@@ -1,6 +1,6 @@
 package model;
 
-// Station class - handles metro station data
+// Version A - conflict branch
 public class Station {
 
     private String name;
