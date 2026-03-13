@@ -1,10 +1,10 @@
 package model;
 
-<<<<<<< HEAD
-// Version Rebase-A
-=======
-// Version Rebase-B
->>>>>>> 8a372c0 (change comment in rebase-b)
+//<<<<<<< HEAD
+//// Version Rebase-A
+//=======
+//// Version Rebase-B
+//>>>>>>> 8a372c0 (change comment in rebase-b)
 public class Train {
 
     private int trainNumber;
