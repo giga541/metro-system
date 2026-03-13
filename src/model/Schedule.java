@@ -1,34 +1,21 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Schedule {
 
-    private LocalDateTime arrivalTime;
-    private LocalDateTime departureTime;
-    private Train train;
+    private List<Train> trains = new ArrayList<>();
+    private List<LocalDateTime> arrivalTimes = new ArrayList<>();
+    private List<LocalDateTime> departureTimes = new ArrayList<>();
 
-    public LocalDateTime getArrivalTime() {
-        return arrivalTime;
-    }
+    public void addTrain(Train train) { trains.add(train); }
+    public List<Train> getTrains() { return trains; }
 
-    public void setArrivalTime(LocalDateTime arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
+    public void addArrivalTime(LocalDateTime arrivalTime) { arrivalTimes.add(arrivalTime); }
+    public List<LocalDateTime> getArrivalTimes() { return arrivalTimes; }
 
-    public LocalDateTime getDepartureTime() {
-        return departureTime;
-    }
-
-    public void setDepartureTime(LocalDateTime departureTime) {
-        this.departureTime = departureTime;
-    }
-
-    public Train getTrain() {
-        return train;
-    }
-
-    public void setTrain(Train train) {
-        this.train = train;
-    }
+    public void addDepartureTime(LocalDateTime departureTime) { departureTimes.add(departureTime); }
+    public List<LocalDateTime> getDepartureTimes() { return departureTimes; }
 }

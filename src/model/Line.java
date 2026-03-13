@@ -5,13 +5,9 @@ public class Line {
     private String lineName;
     private Schedule schedule;
 
-    String metroLine;
+    public String getLineName() { return lineName; }
+    public void setLineName(String lineName) { this.lineName = lineName; }
 
-    public String getLine() {
-        return metroLine;
-    }
-
-    public void setName(String metroLine) {
-        this.metroLine = metroLine;
-    }
+    public Schedule getSchedule() { return schedule; }
+    public void setSchedule(Schedule schedule) { this.schedule = schedule; }
 }
