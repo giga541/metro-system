@@ -4,7 +4,7 @@ package model;
 /// / Version Rebase-A
 //=======
 
-//// Version Rebase-B
+/// / Version Rebase-B
 //>>>>>>> 8a372c0 (change comment in rebase-b)
 public class Train {
 

@@ -11,18 +11,43 @@ public class MetroSystem {
     private List<Line> lines = new ArrayList<>();
     private List<Ticket> tickets = new ArrayList<>();
 
-    public List<Train> getTrains() { return trains; }
-    public void addTrain(Train train) { trains.add(train); }
+    public List<Train> getTrains() {
+        return trains;
+    }
 
-    public List<Station> getStations() { return stations; }
-    public void addStation(Station station) { stations.add(station); }
+    public void addTrain(Train train) {
+        trains.add(train);
+    }
 
-    public List<Passenger> getPassengers() { return passengers; }
-    public void addPassenger(Passenger passenger) { passengers.add(passenger); }
+    public List<Station> getStations() {
+        return stations;
+    }
 
-    public List<Line> getLines() { return lines; }
-    public void addLine(Line line) { lines.add(line); }
+    public void addStation(Station station) {
+        stations.add(station);
+    }
 
-    public List<Ticket> getTickets() { return tickets; }
-    public void addTicket(Ticket ticket) { tickets.add(ticket); }
+    public List<Passenger> getPassengers() {
+        return passengers;
+    }
+
+    public void addPassenger(Passenger passenger) {
+        passengers.add(passenger);
+    }
+
+    public List<Line> getLines() {
+        return lines;
+    }
+
+    public void addLine(Line line) {
+        lines.add(line);
+    }
+
+    public List<Ticket> getTickets() {
+        return tickets;
+    }
+
+    public void addTicket(Ticket ticket) {
+        tickets.add(ticket);
+    }
 }

@@ -10,12 +10,27 @@ public class Schedule {
     private List<LocalDateTime> arrivalTimes = new ArrayList<>();
     private List<LocalDateTime> departureTimes = new ArrayList<>();
 
-    public void addTrain(Train train) { trains.add(train); }
-    public List<Train> getTrains() { return trains; }
+    public void addTrain(Train train) {
+        trains.add(train);
+    }
 
-    public void addArrivalTime(LocalDateTime arrivalTime) { arrivalTimes.add(arrivalTime); }
-    public List<LocalDateTime> getArrivalTimes() { return arrivalTimes; }
+    public List<Train> getTrains() {
+        return trains;
+    }
 
-    public void addDepartureTime(LocalDateTime departureTime) { departureTimes.add(departureTime); }
-    public List<LocalDateTime> getDepartureTimes() { return departureTimes; }
+    public void addArrivalTime(LocalDateTime arrivalTime) {
+        arrivalTimes.add(arrivalTime);
+    }
+
+    public List<LocalDateTime> getArrivalTimes() {
+        return arrivalTimes;
+    }
+
+    public void addDepartureTime(LocalDateTime departureTime) {
+        departureTimes.add(departureTime);
+    }
+
+    public List<LocalDateTime> getDepartureTimes() {
+        return departureTimes;
+    }
 }
