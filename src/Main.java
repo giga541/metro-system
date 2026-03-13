@@ -81,5 +81,14 @@ public class Main {
 
         System.out.println("Ticket 1 price: " + metro.getTicket1().getPrice());
         System.out.println("Ticket 2 price: " + metro.getTicket2().getPrice());
+
+        Schedule schedule = new Schedule();
+        schedule.setArrivalTime(LocalDateTime.now());
+        schedule.setDepartureTime(LocalDateTime.now().plusMinutes(30));
+        schedule.setTrain(train1);
+
+        System.out.println("Arrival: " + schedule.getArrivalTime());
+        System.out.println("Departure: " + schedule.getDepartureTime());
+        System.out.println("Train number: " + schedule.getTrain().getTrainNumber());
     }
 }
