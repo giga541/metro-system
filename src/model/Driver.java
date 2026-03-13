@@ -17,10 +17,19 @@ public class Driver {
         this.driverId = totalDrivers;
     }
 
-    public static int getTotalDrivers() { return totalDrivers; }
+    public static int getTotalDrivers() {
+        return totalDrivers;
+    }
 
-    public int getDriverId() { return driverId; }
+    public int getDriverId() {
+        return driverId;
+    }
 
-    public String getDriverName() { return driverName; }
-    public void setDriverName(String driverName) { this.driverName = driverName; }
+    public String getDriverName() {
+        return driverName;
+    }
+
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
+    }
 }

@@ -37,7 +37,6 @@ public class Main {
         System.out.println(ticket.getPrice());
         System.out.println(ticket.getPurchaseTime());
 
-
         Booking booking = new Booking();
         booking.bookTicket(passenger1, train1, ticket);
 
