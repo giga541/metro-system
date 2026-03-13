@@ -1,6 +1,6 @@
 package model;
 
-// Station class - handles metro station data
+// Version A and B merged
 public class Station {
 
     private String name;
