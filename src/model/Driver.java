@@ -3,7 +3,6 @@ package model;
 public class Driver {
 
     private Driver driver;
-    private Speed speed;
 
     private String driverName;
     private static int driverId;

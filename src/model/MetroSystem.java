@@ -2,41 +2,36 @@ package model;
 
 public class MetroSystem {
 
-    private Train train;
-    private Station station;
-    private Passenger passenger;
-    private Line line;
+    private Train train1;
+    private Train train2;
+    private Station station1;
+    private Station station2;
+    private Passenger passenger1;
+    private Passenger passenger2;
+    private Line line1;
+    private Line line2;
 
-    public Train getTrain() {
-        return train;
-    }
+    public Train getTrain1() { return train1; }
+    public void setTrain1(Train train1) { this.train1 = train1; }
 
-    public void setTrain(Train train) {
-        this.train = train;
-    }
+    public Train getTrain2() { return train2; }
+    public void setTrain2(Train train2) { this.train2 = train2; }
 
-    public Station getStation() {
-        return station;
-    }
+    public Station getStation1() { return station1; }
+    public void setStation1(Station station1) { this.station1 = station1; }
 
-    public void setStation(Station station) {
-        this.station = station;
-    }
+    public Station getStation2() { return station2; }
+    public void setStation2(Station station2) { this.station2 = station2; }
 
-    public Passenger getPassenger() {
-        return passenger;
-    }
+    public Passenger getPassenger1() { return passenger1; }
+    public void setPassenger1(Passenger passenger1) { this.passenger1 = passenger1; }
 
-    public void setPassenger(Passenger passenger) {
-        this.passenger = passenger;
-    }
+    public Passenger getPassenger2() { return passenger2; }
+    public void setPassenger2(Passenger passenger2) { this.passenger2 = passenger2; }
 
-    public Line getLine() {
-        return line;
-    }
+    public Line getLine1() { return line1; }
+    public void setLine1(Line line1) { this.line1 = line1; }
 
-    public void setLine(Line line) {
-        this.line = line;
-    }
-
+    public Line getLine2() { return line2; }
+    public void setLine2(Line line2) { this.line2 = line2; }
 }
