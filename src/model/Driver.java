@@ -1,11 +1,16 @@
+package model;
+
 public class Driver {
+
+    private Driver driver;
+    private Speed speed;
 
     private String driverName;
     private static int driverId;
 
     static {
         driverId = 107;
-        System.out.println("Driver system initialized");
+        System.out.println("model.Driver system initialized");
     }
 
     public String getDriverName() {

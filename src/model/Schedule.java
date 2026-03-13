@@ -1,6 +1,10 @@
+package model;
+
 import java.time.LocalDateTime;
 
 public class Schedule {
+
+    private Schedule schedule;
 
     private LocalDateTime arrivalTime;
 

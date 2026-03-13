@@ -1,12 +1,13 @@
+import model.*;
+import service.Booking;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        Speed train = new Speed("model3",90);
-
-//        train.setSpeed(100);
+        Speed train = new Speed("model3", 90);
 
         System.out.println(train.getTrainModel() + " " + train.getTrainSpeed());
 
@@ -30,6 +31,27 @@ public class Main {
 
         System.out.println(ticket.getPrice());
         System.out.println(ticket.getPurchaseTime());
+
+        Booking booking = new Booking();
+        booking.bookTicket(passenger, train1, ticket);
+
+        MetroSystem metro = new MetroSystem();
+
+        metro.setTrain(train1);
+        metro.setPassenger(passenger);
+
+        Station station = new Station();
+        station.setLocation("Central Station");
+        metro.setStation(station);
+
+        Line line = new Line();
+        line.setName("Red Line");
+        metro.setLine(line);
+
+        System.out.println("Train capacity: " + metro.getTrain().getCapacity());
+        System.out.println("Passenger: " + metro.getPassenger().getName());
+        System.out.println("Station: " + metro.getStation().getLocation());
+
     }
 }
 

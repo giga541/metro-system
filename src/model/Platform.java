@@ -1,4 +1,8 @@
+package model;
+
 public class Platform {
+
+    private Platform platform;
 
     private int platformNumber;
 
