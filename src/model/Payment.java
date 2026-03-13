@@ -2,6 +2,8 @@ package model;
 
 //making changes for git stash example
 
+//making changes
+
 public class Payment {
 
     private Payment payment;
