@@ -12,6 +12,8 @@ public class Main {
 
         Driver driver = new Driver();
         driver.setDriverName("Mike");
+        Driver driver2 = new Driver();
+        driver2.setDriverName("John");
         System.out.println(driver.getDriverName());
         System.out.println(driver.getDriverId());
 
@@ -68,6 +70,6 @@ public class Main {
         System.out.println("Passenger 2: " + metro.getPassenger2().getName());
         System.out.println("Station 1: " + metro.getStation1().getLocation());
         System.out.println("Station 2: " + metro.getStation2().getLocation());
-
+        System.out.println(Driver.getTotalDrivers());
     }
 }
