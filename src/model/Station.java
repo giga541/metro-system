@@ -8,11 +8,21 @@ public class Station extends Infrastructure {
     private Platform[] platforms = new Platform[5];
     private int platformCount = 0;
 
-    public void addPlatform(Platform platform) { platforms[platformCount++] = platform; }
-    public Platform[] getPlatforms() { return platforms; }
+    public void addPlatform(Platform platform) {
+        platforms[platformCount++] = platform;
+    }
 
-    public String getLocation() { return location; }
-    public void setLocation(String location) { this.location = location; }
+    public Platform[] getPlatforms() {
+        return platforms;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
     @Override
     public String toString() {

@@ -17,8 +17,19 @@ public class Schedule {
         count++;
     }
 
-    public Train[] getTrains() { return trains; }
-    public LocalDateTime[] getArrivalTimes() { return arrivalTimes; }
-    public LocalDateTime[] getDepartureTimes() { return departureTimes; }
-    public int getCount() { return count; }
+    public Train[] getTrains() {
+        return trains;
+    }
+
+    public LocalDateTime[] getArrivalTimes() {
+        return arrivalTimes;
+    }
+
+    public LocalDateTime[] getDepartureTimes() {
+        return departureTimes;
+    }
+
+    public int getCount() {
+        return count;
+    }
 }

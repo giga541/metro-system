@@ -14,24 +14,54 @@ public class MetroSystem {
     private int lineCount = 0;
     private int ticketCount = 0;
 
-    public Train[] getTrains() { return trains; }
-    public void addTrain(Train train) { trains[trainCount++] = train; }
+    public Train[] getTrains() {
+        return trains;
+    }
 
-    public Station[] getStations() { return stations; }
-    public void addStation(Station station) { stations[stationCount++] = station; }
+    public void addTrain(Train train) {
+        trains[trainCount++] = train;
+    }
 
-    public Passenger[] getPassengers() { return passengers; }
-    public void addPassenger(Passenger passenger) { passengers[passengerCount++] = passenger; }
+    public Station[] getStations() {
+        return stations;
+    }
 
-    public Line[] getLines() { return lines; }
-    public void addLine(Line line) { lines[lineCount++] = line; }
+    public void addStation(Station station) {
+        stations[stationCount++] = station;
+    }
 
-    public Ticket[] getTickets() { return tickets; }
-    public void addTicket(Ticket ticket) { tickets[ticketCount++] = ticket; }
+    public Passenger[] getPassengers() {
+        return passengers;
+    }
+
+    public void addPassenger(Passenger passenger) {
+        passengers[passengerCount++] = passenger;
+    }
+
+    public Line[] getLines() {
+        return lines;
+    }
+
+    public void addLine(Line line) {
+        lines[lineCount++] = line;
+    }
+
+    public Ticket[] getTickets() {
+        return tickets;
+    }
+
+    public void addTicket(Ticket ticket) {
+        tickets[ticketCount++] = ticket;
+    }
 
     private Vehicle[] vehicles = new Vehicle[10];
     private int vehicleCount = 0;
 
-    public void addVehicle(Vehicle vehicle) { vehicles[vehicleCount++] = vehicle; }
-    public Vehicle[] getVehicles() { return vehicles; }
+    public void addVehicle(Vehicle vehicle) {
+        vehicles[vehicleCount++] = vehicle;
+    }
+
+    public Vehicle[] getVehicles() {
+        return vehicles;
+    }
 }
