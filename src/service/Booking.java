@@ -3,8 +3,13 @@ package service;
 import model.Passenger;
 import model.Train;
 import model.Ticket;
+import model.Vehicle;
 
 public class Booking {
+
+    public void printVehicleType(Vehicle vehicle) {
+        System.out.println("Vehicle type: " + vehicle.getType());
+    }
 
     public void bookTicket(Passenger passenger, Train train, Ticket ticket) {
 

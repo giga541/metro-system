@@ -1,6 +1,6 @@
 package model;
 
-public class Driver {
+public class Driver extends Person {
 
     private static int totalDrivers = 0;
 
