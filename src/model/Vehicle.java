@@ -2,8 +2,8 @@ package model;
 
 public abstract class Vehicle {
 
-    private String model;
-    private Speed speed;
+    protected String model;
+    protected Speed speed;
 
     public String getModel() {
         return model;
