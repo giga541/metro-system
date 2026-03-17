@@ -5,24 +5,19 @@ import java.util.Objects;
 public class Station extends Infrastructure {
 
     private String location;
-    private Platform[] platforms = new Platform[5];
-    private int platformCount = 0;
+    private Platform[] platforms = new Platform[0];
 
     public void addPlatform(Platform platform) {
-        platforms[platformCount++] = platform;
+        Platform[] newPlatforms = new Platform[platforms.length + 1];
+        System.arraycopy(platforms, 0, newPlatforms, 0, platforms.length);
+        newPlatforms[platforms.length] = platform;
+        platforms = newPlatforms;
     }
 
-    public Platform[] getPlatforms() {
-        return platforms;
-    }
+    public Platform[] getPlatforms() { return platforms; }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
+    public String getLocation() { return location; }
+    public void setLocation(String location) { this.location = location; }
 
     @Override
     public String toString() {

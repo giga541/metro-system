@@ -104,7 +104,7 @@ public class Main {
         System.out.println("Ticket 2 price: " + metro.getTickets()[1].getPrice());
 
         System.out.println("\n--- Schedule for " + line1.getLineName() + " ---");
-        for (int i = 0; i < schedule.getCount(); i++) {
+        for (int i = 0; i < schedule.getTrains().length; i++) {
             System.out.println("Train: " + schedule.getTrains()[i].getTrainNumber()
                     + " | Arrival: " + schedule.getArrivalTimes()[i]
                     + " | Departure: " + schedule.getDepartureTimes()[i]);
