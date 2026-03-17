@@ -1,6 +1,6 @@
 package model;
 
-public class Line {
+public class Line extends Transport {
 
     private String lineName;
     private Schedule schedule;

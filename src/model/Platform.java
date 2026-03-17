@@ -1,6 +1,6 @@
 package model;
 
-public class Platform {
+public class Platform extends Infrastructure {
 
     private int platformNumber;
 

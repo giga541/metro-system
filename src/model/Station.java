@@ -1,18 +1,8 @@
 package model;
 
-// Version A and B merged
-public class Station {
+public class Station extends Infrastructure {
 
-    private String name;
     private String location;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getLocation() {
         return location;

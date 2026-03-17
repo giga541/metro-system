@@ -5,7 +5,6 @@ public class Driver {
     private static int totalDrivers = 0;
 
     private int driverId;
-    private String driverName;
 
     static {
         totalDrivers = 0;
@@ -23,13 +22,5 @@ public class Driver {
 
     public int getDriverId() {
         return driverId;
-    }
-
-    public String getDriverName() {
-        return driverName;
-    }
-
-    public void setDriverName(String driverName) {
-        this.driverName = driverName;
     }
 }

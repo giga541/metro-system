@@ -1,14 +1,9 @@
 package model;
 
-public class Passenger {
+public class Passenger extends Person{
 
-    private String name;
+    private String seatNumber;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    public String getSeatNumber() { return seatNumber; }
+    public void setSeatNumber(String seatNumber) { this.seatNumber = seatNumber; }
 }
