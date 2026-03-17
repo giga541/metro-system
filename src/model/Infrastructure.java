@@ -1,6 +1,7 @@
 package model;
 
 public class Infrastructure {
+
     private String address;
     private String city;
 

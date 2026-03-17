@@ -4,7 +4,7 @@ package model;
 
 //making changes
 
-public class Payment {
+public class Payment extends BasePayment {
 
     private String cardNumber;
 

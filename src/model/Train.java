@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Train extends Vehicle {
 
     private int trainNumber;
@@ -42,5 +44,27 @@ public class Train extends Vehicle {
 
     public void setSpeed(Speed speed) {
         this.speed = speed;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Train train = (Train) o;
+        return trainNumber == train.trainNumber && capacity == train.capacity && Objects.equals(driver, train.driver) && Objects.equals(speed, train.speed);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(trainNumber, capacity, driver, speed);
+    }
+
+    @Override
+    public String toString() {
+        return "Train{" +
+                "trainNumber=" + trainNumber +
+                ", capacity=" + capacity +
+                ", driver=" + driver +
+                ", speed=" + speed +
+                '}';
     }
 }
