@@ -1,36 +1,24 @@
 package model;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Schedule {
 
-    private List<Train> trains = new ArrayList<>();
-    private List<LocalDateTime> arrivalTimes = new ArrayList<>();
-    private List<LocalDateTime> departureTimes = new ArrayList<>();
+    private Train[] trains = new Train[10];
+    private LocalDateTime[] arrivalTimes = new LocalDateTime[10];
+    private LocalDateTime[] departureTimes = new LocalDateTime[10];
 
-    public void addTrain(Train train) {
-        trains.add(train);
+    private int count = 0;
+
+    public void addEntry(Train train, LocalDateTime arrivalTime, LocalDateTime departureTime) {
+        trains[count] = train;
+        arrivalTimes[count] = arrivalTime;
+        departureTimes[count] = departureTime;
+        count++;
     }
 
-    public List<Train> getTrains() {
-        return trains;
-    }
-
-    public void addArrivalTime(LocalDateTime arrivalTime) {
-        arrivalTimes.add(arrivalTime);
-    }
-
-    public List<LocalDateTime> getArrivalTimes() {
-        return arrivalTimes;
-    }
-
-    public void addDepartureTime(LocalDateTime departureTime) {
-        departureTimes.add(departureTime);
-    }
-
-    public List<LocalDateTime> getDepartureTimes() {
-        return departureTimes;
-    }
+    public Train[] getTrains() { return trains; }
+    public LocalDateTime[] getArrivalTimes() { return arrivalTimes; }
+    public LocalDateTime[] getDepartureTimes() { return departureTimes; }
+    public int getCount() { return count; }
 }

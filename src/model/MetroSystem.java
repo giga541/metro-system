@@ -1,53 +1,37 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MetroSystem {
 
-    private List<Train> trains = new ArrayList<>();
-    private List<Station> stations = new ArrayList<>();
-    private List<Passenger> passengers = new ArrayList<>();
-    private List<Line> lines = new ArrayList<>();
-    private List<Ticket> tickets = new ArrayList<>();
+    private Train[] trains = new Train[10];
+    private Station[] stations = new Station[10];
+    private Passenger[] passengers = new Passenger[10];
+    private Line[] lines = new Line[10];
+    private Ticket[] tickets = new Ticket[10];
 
-    public List<Train> getTrains() {
-        return trains;
-    }
+    private int trainCount = 0;
+    private int stationCount = 0;
+    private int passengerCount = 0;
+    private int lineCount = 0;
+    private int ticketCount = 0;
 
-    public void addTrain(Train train) {
-        trains.add(train);
-    }
+    public Train[] getTrains() { return trains; }
+    public void addTrain(Train train) { trains[trainCount++] = train; }
 
-    public List<Station> getStations() {
-        return stations;
-    }
+    public Station[] getStations() { return stations; }
+    public void addStation(Station station) { stations[stationCount++] = station; }
 
-    public void addStation(Station station) {
-        stations.add(station);
-    }
+    public Passenger[] getPassengers() { return passengers; }
+    public void addPassenger(Passenger passenger) { passengers[passengerCount++] = passenger; }
 
-    public List<Passenger> getPassengers() {
-        return passengers;
-    }
+    public Line[] getLines() { return lines; }
+    public void addLine(Line line) { lines[lineCount++] = line; }
 
-    public void addPassenger(Passenger passenger) {
-        passengers.add(passenger);
-    }
+    public Ticket[] getTickets() { return tickets; }
+    public void addTicket(Ticket ticket) { tickets[ticketCount++] = ticket; }
 
-    public List<Line> getLines() {
-        return lines;
-    }
+    private Vehicle[] vehicles = new Vehicle[10];
+    private int vehicleCount = 0;
 
-    public void addLine(Line line) {
-        lines.add(line);
-    }
-
-    public List<Ticket> getTickets() {
-        return tickets;
-    }
-
-    public void addTicket(Ticket ticket) {
-        tickets.add(ticket);
-    }
+    public void addVehicle(Vehicle vehicle) { vehicles[vehicleCount++] = vehicle; }
+    public Vehicle[] getVehicles() { return vehicles; }
 }
