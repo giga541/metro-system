@@ -6,6 +6,10 @@ public class Passenger extends Person {
 
     private String seatNumber;
 
+    public final void printInfo() {
+        System.out.println("Passenger: " + getName() + ", Seat: " + seatNumber);
+    }
+
     public String getSeatNumber() {
         return seatNumber;
     }

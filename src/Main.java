@@ -35,6 +35,7 @@ public class Main {
         Train train2 = new Train();
         train2.setTrainNumber(102);
         train2.setCapacity(80);
+        train1.setSpeed(speed);
 
         // Tickets
         Ticket ticket1 = new Ticket();
@@ -92,7 +93,6 @@ public class Main {
         metro.addVehicle(train1);
         metro.addVehicle(new Bus());
 
-        // Output
         System.out.println("\n--- Metro System ---");
         System.out.println("Train 1: " + metro.getTrains()[0]);
         System.out.println("Train 2: " + metro.getTrains()[1]);
@@ -125,5 +125,32 @@ public class Main {
         System.out.println(train1);
         System.out.println(passenger1);
         System.out.println(station1);
+
+        // interfaces - polymorphism via method parameter
+        Booking book = new Booking();
+
+        book.startMoving(train1); // Train implements Moveable
+
+        book.processPayment(ticket1); // Ticket implements Payable
+
+        book.showScheduleInfo(line1); // Line implements Schedulable
+
+        // Identifiable
+        Identifiable identifiable = train1; // field with interface type
+        System.out.println("ID: " + identifiable.getId());
+        System.out.println("Type: " + identifiable.getType());
+
+        // Bookable
+        Bookable bookable = ticket1; // field with interface type
+        System.out.println("Is available: " + bookable.isAvailable());
+        bookable.book();
+        System.out.println("Is available after booking: " + bookable.isAvailable());
+
+        // final class constant
+        System.out.println("Metro name: " + Constants.METRO_NAME);
+        System.out.println("Max capacity: " + Constants.MAX_CAPACITY);
+
+        // final method
+        passenger1.printInfo();
     }
 }

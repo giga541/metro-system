@@ -1,11 +1,23 @@
 package service;
 
-import model.Passenger;
-import model.Train;
-import model.Ticket;
-import model.Vehicle;
+import model.*;
 
 public class Booking {
+
+    public void processPayment(Payable payable) {
+        System.out.println("Amount to pay: " + payable.getAmount());
+        payable.processPayment();
+    }
+
+    public void startMoving(Moveable moveable) {
+        moveable.move();
+        System.out.println("Moving at speed: " + moveable.getSpeed());
+    }
+
+    public void showScheduleInfo(Scheduleable schedulable) {
+        schedulable.addToSchedule();
+        System.out.println(schedulable.getScheduleInfo());
+    }
 
     public void printVehicleType(Vehicle vehicle) {
         System.out.println("Vehicle type: " + vehicle.getType());

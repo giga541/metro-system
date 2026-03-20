@@ -11,7 +11,7 @@ public class Train extends Vehicle implements Moveable, Identifiable  {
 
     @Override
     public void move() {
-        System.out.println("Train " + trainNumber + " is moving on the tracks at speed: " + model);
+        System.out.println("Train " + trainNumber + " is moving on the tracks at speed: " + getSpeed());
     }
 
     @Override
