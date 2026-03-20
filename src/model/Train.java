@@ -2,12 +2,27 @@ package model;
 
 import java.util.Objects;
 
-public class Train extends Vehicle {
+public class Train extends Vehicle implements Moveable, Identifiable  {
 
     private int trainNumber;
     private int capacity;
     private Driver driver;
     private Speed speed;
+
+    @Override
+    public void move() {
+        System.out.println("Train " + trainNumber + " is moving on the tracks at speed: " + model);
+    }
+
+    @Override
+    public int getSpeed() {
+        return speed != null ? speed.getTrainSpeed() : 0;
+    }
+
+    @Override
+    public int getId() {
+        return trainNumber;
+    }
 
     @Override
     public String getType() {

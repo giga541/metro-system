@@ -13,9 +13,9 @@ public abstract class Vehicle {
         this.model = model;
     }
 
-    public Speed getSpeed() {
-        return speed;
-    }
+//    public Speed getSpeed() {
+//        return speed;
+//    }
 
     public abstract String getType();
 }

@@ -3,10 +3,33 @@ package model;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class Ticket {
+public class Ticket implements Bookable, Payable {
 
     private BigDecimal price;
     private LocalDateTime purchaseTime;
+    private boolean available = true;
+    ;
+
+    @Override
+    public void book() {
+        this.available = false;
+        System.out.println("Ticket booked for price: " + price);
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return available;
+    }
+
+    @Override
+    public double getAmount() {
+        return price != null ? price.doubleValue() : 0;
+    }
+
+    @Override
+    public void processPayment() {
+        System.out.println("Processing payment of: " + price);
+    }
 
     public BigDecimal getPrice() {
         return price;
