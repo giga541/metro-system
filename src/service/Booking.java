@@ -1,8 +1,37 @@
 package service;
 
+import exception.*;
 import model.*;
+import model.Scheduleable;
+import model.Moveable;
+
+import java.math.BigDecimal;
 
 public class Booking {
+
+    public void bookTicket(Passenger passenger, Train train, Ticket ticket) throws TicketBookingException {
+
+        if (passenger == null) {
+            throw new PassengerNotFoundException("Passenger not found!");
+        }
+
+        if (train == null) {
+            throw new TrainNotFoundException("Train not found!");
+        }
+
+        if (ticket.getPrice().compareTo(BigDecimal.ZERO) <= 0) {
+            throw new InvalidTicketPriceException("Ticket price must be greater than 0!");
+        }
+
+        if (train.getCapacity() <= 0) {
+            throw new NoSeatsAvailableException("No seats available on train " + train.getTrainNumber());
+        }
+
+        ticket.book();
+        System.out.println("Ticket booked for " + passenger.getName());
+        System.out.println("Train number: " + train.getTrainNumber());
+        System.out.println("Price: " + ticket.getPrice());
+    }
 
     public void processPayment(Payable payable) {
         System.out.println("Amount to pay: " + payable.getAmount());
@@ -22,21 +51,4 @@ public class Booking {
     public void printVehicleType(Vehicle vehicle) {
         System.out.println("Vehicle type: " + vehicle.getType());
     }
-
-    public void bookTicket(Passenger passenger, Train train, Ticket ticket) {
-
-        if (train.getCapacity() > 0) {
-
-            System.out.println("model.Ticket booked for " + passenger.getName());
-            System.out.println("model.Train number: " + train.getTrainNumber());
-            System.out.println("Price: " + ticket.getPrice());
-
-        } else {
-
-            System.out.println("No seats available");
-
-        }
-
-    }
-
 }

@@ -1,3 +1,6 @@
+import exception.NoSeatsAvailableException;
+import exception.PassengerNotFoundException;
+import exception.TicketBookingException;
 import model.*;
 import service.Booking;
 
@@ -47,7 +50,30 @@ public class Main {
 
         // Booking
         Booking booking = new Booking();
-        booking.bookTicket(passenger1, train1, ticket1);
+        try {
+            booking.bookTicket(passenger1, train1, ticket1);
+        } catch (TicketBookingException e) {
+            System.out.println("Booking failed: " + e.getMessage());
+        }
+
+        try {
+            booking.bookTicket(null, train1, ticket1);
+        } catch (TicketBookingException e) {
+            System.out.println("Booking failed: " + e.getMessage());
+        } catch (PassengerNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        try {
+            Train emptyTrain = new Train();
+            emptyTrain.setTrainNumber(999);
+            emptyTrain.setCapacity(0);
+            booking.bookTicket(passenger1, emptyTrain, ticket1);
+        } catch (TicketBookingException e) {
+            System.out.println("Booking failed: " + e.getMessage());
+        } catch (NoSeatsAvailableException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
 
         // Platforms and Stations
         Platform platform1 = new Platform();
