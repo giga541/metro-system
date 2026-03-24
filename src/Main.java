@@ -66,8 +66,8 @@ public class Main {
 
         // Schedule
         Schedule schedule = new Schedule();
-        schedule.addEntry(train1, LocalDateTime.now(), LocalDateTime.now().plusMinutes(30));
-        schedule.addEntry(train2, LocalDateTime.now().plusHours(1), LocalDateTime.now().plusHours(1).plusMinutes(30));
+        schedule.addTrainSchedule(new TrainSchedule(train1, LocalDateTime.now(), LocalDateTime.now().plusMinutes(30)));
+        schedule.addTrainSchedule(new TrainSchedule(train2, LocalDateTime.now().plusHours(1), LocalDateTime.now().plusHours(1).plusMinutes(30)));
 
         // Lines with stations
         Line line1 = new Line();
@@ -104,10 +104,11 @@ public class Main {
         System.out.println("Ticket 2 price: " + metro.getTickets()[1].getPrice());
 
         System.out.println("\n--- Schedule for " + line1.getLineName() + " ---");
-        for (int i = 0; i < schedule.getTrains().length; i++) {
-            System.out.println("Train: " + schedule.getTrains()[i].getTrainNumber()
-                    + " | Arrival: " + schedule.getArrivalTimes()[i]
-                    + " | Departure: " + schedule.getDepartureTimes()[i]);
+        for (int i = 0; i < schedule.getTrainSchedules().length; i++) {
+            TrainSchedule ts = schedule.getTrainSchedules()[i];
+            System.out.println("Train: " + ts.getTrain().getTrainNumber()
+                    + " | Arrival: " + ts.getArrivalTime()
+                    + " | Departure: " + ts.getDepartureTime());
         }
 
         System.out.println("\n--- Polymorphism ---");
@@ -152,5 +153,16 @@ public class Main {
 
         // final method
         passenger1.printInfo();
+
+        // find a specific train's schedule by its number
+        TrainSchedule ts = schedule.findByTrain(101);
+
+        if (ts != null) {
+            System.out.println("Train: " + ts.getTrain().getTrainNumber());
+            System.out.println("Arrives at: " + ts.getArrivalTime());
+            System.out.println("Departs at: " + ts.getDepartureTime());
+        } else {
+            System.out.println("Train not found in schedule");
+        }
     }
 }
