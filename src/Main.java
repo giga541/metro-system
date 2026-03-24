@@ -3,6 +3,7 @@ import exception.PassengerNotFoundException;
 import exception.TicketBookingException;
 import model.*;
 import service.Booking;
+import service.MetroSystemSession;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -73,6 +74,12 @@ public class Main {
             System.out.println("Booking failed: " + e.getMessage());
         } catch (NoSeatsAvailableException e) {
             System.out.println("Error: " + e.getMessage());
+        }
+
+        try (MetroSystemSession session = new MetroSystemSession("Main Session")) {
+            session.doWork();
+        } catch (Exception e) {
+            System.out.println("Session error: " + e.getMessage());
         }
 
         // Platforms and Stations
