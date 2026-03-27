@@ -1,8 +1,11 @@
 package model;
 
+import interfaces.Identifiable;
+import interfaces.Moveable;
+
 import java.util.Objects;
 
-public class Train extends Vehicle implements Moveable, Identifiable  {
+public class Train extends Vehicle implements Moveable, Identifiable {
 
     private int trainNumber;
     private int capacity;

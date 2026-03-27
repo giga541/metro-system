@@ -1,8 +1,10 @@
 package model;
 
+import interfaces.Bookable;
+
 import java.util.Objects;
 
-public class Passenger extends Person implements Bookable{
+public class Passenger extends Person implements Bookable {
 
     private String seatNumber;
     private boolean booked = false;

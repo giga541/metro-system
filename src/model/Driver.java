@@ -1,6 +1,8 @@
 package model;
 
-public class Driver extends Person implements Identifiable{
+import interfaces.Identifiable;
+
+public class Driver extends Person implements Identifiable {
 
     @Override
     public int getId() {

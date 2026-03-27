@@ -1,9 +1,10 @@
 package service;
 
 import exception.*;
+import interfaces.Payable;
 import model.*;
-import model.Scheduleable;
-import model.Moveable;
+import interfaces.Scheduleable;
+import interfaces.Moveable;
 
 import java.math.BigDecimal;
 
@@ -25,6 +26,15 @@ public class Booking {
 
         if (train.getCapacity() <= 0) {
             throw new NoSeatsAvailableException("No seats available on train " + train.getTrainNumber());
+        }
+
+        try {
+            ticket.book();
+            System.out.println("Ticket booked for " + passenger.getName());
+            System.out.println("Train number: " + train.getTrainNumber());
+            System.out.println("Price: " + ticket.getPrice());
+        } catch (Exception e) {
+            throw new TicketBookingException("Booking failed unexpectedly: " + e.getMessage());
         }
 
         ticket.book();

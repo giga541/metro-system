@@ -1,5 +1,8 @@
 package model;
 
+import interfaces.Bookable;
+import interfaces.Payable;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 

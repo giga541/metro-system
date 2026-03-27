@@ -1,5 +1,7 @@
 package model;
 
+import interfaces.Payable;
+
 import java.math.BigDecimal;
 
 public class Payment extends BasePayment implements Payable {

@@ -19,9 +19,7 @@ public class MetroSystem {
     private List<Train> trains = new ArrayList<>();
     private List<Passenger> passengers = new ArrayList<>();
     private List<Ticket> tickets = new ArrayList<>();
-
     private Set<Line> lines = new HashSet<>();
-
     private Map<Integer, Train> trainMap = new HashMap<>();
 
     public static String getMetroSystemName() {
@@ -112,9 +110,23 @@ public class MetroSystem {
         }
     }
 
-    public List<Train> getTrains() { return trains; }
-    public List<Passenger> getPassengers() { return passengers; }
-    public List<Ticket> getTickets() { return tickets; }
-    public Set<Line> getLines() { return lines; }
-    public Map<Integer, Train> getTrainMap() { return trainMap; }
+    public List<Train> getTrains() {
+        return trains;
+    }
+
+    public List<Passenger> getPassengers() {
+        return passengers;
+    }
+
+    public List<Ticket> getTickets() {
+        return tickets;
+    }
+
+    public Set<Line> getLines() {
+        return lines;
+    }
+
+    public Map<Integer, Train> getTrainMap() {
+        return trainMap;
+    }
 }
