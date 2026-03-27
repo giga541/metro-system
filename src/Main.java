@@ -122,8 +122,7 @@ public class Main {
         System.out.println("Ticket 2 price: " + metro.getTickets().get(1).getPrice());
 
         System.out.println("\n--- Schedule for " + line1.getLineName() + " ---");
-        for (int i = 0; i < schedule.getTrainSchedules().length; i++) {
-            TrainSchedule ts = schedule.getTrainSchedules()[i];
+        for (TrainSchedule ts : schedule.getTrainSchedules()) {
             System.out.println("Train: " + ts.getTrain().getTrainNumber()
                     + " | Arrival: " + ts.getArrivalTime()
                     + " | Departure: " + ts.getDepartureTime());
