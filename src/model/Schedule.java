@@ -1,5 +1,7 @@
 package model;
 
+import exception.TrainNotFoundException;
+
 public class Schedule {
 
     private TrainSchedule[] trainSchedules = new TrainSchedule[0];
@@ -11,14 +13,14 @@ public class Schedule {
         trainSchedules = newSchedules;
     }
 
-    public TrainSchedule findByTrain(int trainNumber) {
+    public TrainSchedule[] getTrainSchedules() { return trainSchedules; }
+
+    public TrainSchedule findByTrain(int trainNumber) throws TrainNotFoundException {
         for (int i = 0; i < trainSchedules.length; i++) {
             if (trainSchedules[i].getTrain().getTrainNumber() == trainNumber) {
                 return trainSchedules[i];
             }
         }
-        return null;
+        throw new TrainNotFoundException("Train " + trainNumber + " not found in schedule!");
     }
-
-    public TrainSchedule[] getTrainSchedules() { return trainSchedules; }
 }

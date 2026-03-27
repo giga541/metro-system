@@ -8,7 +8,7 @@ public class BasePayment {
     private BigDecimal amount;
     private LocalDateTime paymentDate;
 
-    public BigDecimal getAmount() {
+    public BigDecimal getAmountValue() {
         return amount;
     }
 

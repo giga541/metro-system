@@ -22,8 +22,8 @@ public class Ticket implements Bookable, Payable {
     }
 
     @Override
-    public double getAmount() {
-        return price != null ? price.doubleValue() : 0;
+    public BigDecimal getAmount() {
+        return price != null ? price : BigDecimal.ZERO;
     }
 
     @Override

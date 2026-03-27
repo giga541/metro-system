@@ -1,6 +1,16 @@
 package model;
 
-public class Driver extends Person {
+public class Driver extends Person implements Identifiable{
+
+    @Override
+    public int getId() {
+        return driverId;
+    }
+
+    @Override
+    public String getType() {
+        return "Driver";
+    }
 
     private static int totalDrivers = 0;
 

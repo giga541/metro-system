@@ -1,6 +1,5 @@
-import exception.NoSeatsAvailableException;
-import exception.PassengerNotFoundException;
 import exception.TicketBookingException;
+import exception.TrainNotFoundException;
 import model.*;
 import service.Booking;
 import service.MetroSystemSession;
@@ -49,37 +48,23 @@ public class Main {
         ticket2.setPrice(new BigDecimal("3.50"));
         ticket2.setPurchaseTime(LocalDateTime.now());
 
-        // Booking
+        // Booking - checked exception with finally
         Booking booking = new Booking();
         try {
             booking.bookTicket(passenger1, train1, ticket1);
         } catch (TicketBookingException e) {
             System.out.println("Booking failed: " + e.getMessage());
+        } finally {
+            System.out.println("Booking attempt finished");
         }
 
-        try {
-            booking.bookTicket(null, train1, ticket1);
-        } catch (TicketBookingException e) {
-            System.out.println("Booking failed: " + e.getMessage());
-        } catch (PassengerNotFoundException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-
-        try {
-            Train emptyTrain = new Train();
-            emptyTrain.setTrainNumber(999);
-            emptyTrain.setCapacity(0);
-            booking.bookTicket(passenger1, emptyTrain, ticket1);
-        } catch (TicketBookingException e) {
-            System.out.println("Booking failed: " + e.getMessage());
-        } catch (NoSeatsAvailableException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-
+        // AutoCloseable
         try (MetroSystemSession session = new MetroSystemSession("Main Session")) {
             session.doWork();
         } catch (Exception e) {
             System.out.println("Session error: " + e.getMessage());
+        } finally {
+            System.out.println("Session block finished");
         }
 
         // Platforms and Stations
@@ -163,19 +148,17 @@ public class Main {
         // interfaces - polymorphism via method parameter
         Booking book = new Booking();
 
-        book.startMoving(train1); // Train implements Moveable
-
-        book.processPayment(ticket1); // Ticket implements Payable
-
-        book.showScheduleInfo(line1); // Line implements Schedulable
+        book.startMoving(train1);
+        book.processPayment(ticket1);
+        book.showScheduleInfo(line1);
 
         // Identifiable
-        Identifiable identifiable = train1; // field with interface type
+        Identifiable identifiable = train1;
         System.out.println("ID: " + identifiable.getId());
         System.out.println("Type: " + identifiable.getType());
 
         // Bookable
-        Bookable bookable = ticket1; // field with interface type
+        Bookable bookable = ticket1;
         System.out.println("Is available: " + bookable.isAvailable());
         bookable.book();
         System.out.println("Is available after booking: " + bookable.isAvailable());
@@ -187,15 +170,16 @@ public class Main {
         // final method
         passenger1.printInfo();
 
-        // find a specific train's schedule by its number
-        TrainSchedule ts = schedule.findByTrain(101);
-
-        if (ts != null) {
+        // find a specific train's schedule - checked exception with finally
+        try {
+            TrainSchedule ts = schedule.findByTrain(101);
             System.out.println("Train: " + ts.getTrain().getTrainNumber());
             System.out.println("Arrives at: " + ts.getArrivalTime());
             System.out.println("Departs at: " + ts.getDepartureTime());
-        } else {
-            System.out.println("Train not found in schedule");
+        } catch (TrainNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            System.out.println("Schedule search finished");
         }
     }
 }

@@ -2,9 +2,10 @@ package model;
 
 import java.util.Objects;
 
-public class Passenger extends Person {
+public class Passenger extends Person implements Bookable{
 
     private String seatNumber;
+    private boolean booked = false;
 
     public final void printInfo() {
         System.out.println("Passenger: " + getName() + ", Seat: " + seatNumber);
@@ -35,5 +36,16 @@ public class Passenger extends Person {
         return "Passenger{" +
                 "seatNumber='" + seatNumber + '\'' +
                 '}';
+    }
+
+    @Override
+    public void book() {
+        this.booked = true;
+        System.out.println("Seat " + seatNumber + " booked for " + getName());
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return !booked;
     }
 }

@@ -1,18 +1,21 @@
 package model;
 
-//making changes for git stash example
+import java.math.BigDecimal;
 
-//making changes
-
-public class Payment extends BasePayment {
+public class Payment extends BasePayment implements Payable {
 
     private String cardNumber;
 
-    public String getCardNumber() {
-        return cardNumber;
+    @Override
+    public void processPayment() {
+        System.out.println("Processing card payment: " + cardNumber);
     }
 
-    public void setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
+    @Override
+    public BigDecimal getAmount() {
+        return getAmountValue();
     }
+
+    public String getCardNumber() { return cardNumber; }
+    public void setCardNumber(String cardNumber) { this.cardNumber = cardNumber; }
 }

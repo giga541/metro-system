@@ -1,7 +1,10 @@
 package model;
 
+import java.math.BigDecimal;
+
 public interface Payable {
 
     void processPayment();
-    double getAmount();
+
+    BigDecimal getAmount();
 }

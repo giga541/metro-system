@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-public class Station extends Infrastructure {
+public class Station extends Infrastructure implements Scheduleable {
 
     private String location;
     private Platform[] platforms = new Platform[0];
@@ -14,10 +14,17 @@ public class Station extends Infrastructure {
         platforms = newPlatforms;
     }
 
-    public Platform[] getPlatforms() { return platforms; }
+    public Platform[] getPlatforms() {
+        return platforms;
+    }
 
-    public String getLocation() { return location; }
-    public void setLocation(String location) { this.location = location; }
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 
     @Override
     public String toString() {
@@ -35,5 +42,15 @@ public class Station extends Infrastructure {
     @Override
     public int hashCode() {
         return Objects.hash(location);
+    }
+
+    @Override
+    public void addToSchedule() {
+        System.out.println("Station " + location + " added to schedule");
+    }
+
+    @Override
+    public String getScheduleInfo() {
+        return "Station: " + location + " in " + getCity();
     }
 }
