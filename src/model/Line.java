@@ -1,10 +1,18 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 public class Line extends Transport implements Scheduleable {
 
     private String lineName;
     private Schedule schedule;
-    private Station[] stations = new Station[0];
+    private List<Station> stations = new ArrayList<>();
+
+    public void addStation(Station station) {
+        stations.add(station);
+    }
 
     @Override
     public void addToSchedule() {
@@ -13,33 +21,25 @@ public class Line extends Transport implements Scheduleable {
 
     @Override
     public String getScheduleInfo() {
-        return "Line: " + lineName + " has " + stations.length + " stations";
+        return "Line: " + lineName + " has " + stations.size() + " stations";
     }
 
-    public void addStation(Station station) {
-        Station[] newStations = new Station[stations.length + 1];
-        System.arraycopy(stations, 0, newStations, 0, stations.length);
-        newStations[stations.length] = station;
-        stations = newStations;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Line)) return false;
+        Line line = (Line) o;
+        return Objects.equals(lineName, line.lineName);
     }
 
-    public Station[] getStations() {
-        return stations;
+    @Override
+    public int hashCode() {
+        return Objects.hash(lineName);
     }
 
-    public String getLineName() {
-        return lineName;
-    }
-
-    public void setLineName(String lineName) {
-        this.lineName = lineName;
-    }
-
-    public Schedule getSchedule() {
-        return schedule;
-    }
-
-    public void setSchedule(Schedule schedule) {
-        this.schedule = schedule;
-    }
+    public List<Station> getStations() { return stations; }
+    public String getLineName() { return lineName; }
+    public void setLineName(String lineName) { this.lineName = lineName; }
+    public Schedule getSchedule() { return schedule; }
+    public void setSchedule(Schedule schedule) { this.schedule = schedule; }
 }

@@ -112,14 +112,14 @@ public class Main {
         metro.addVehicle(new Bus());
 
         System.out.println("\n--- Metro System ---");
-        System.out.println("Train 1: " + metro.getTrains()[0]);
-        System.out.println("Train 2: " + metro.getTrains()[1]);
-        System.out.println("Passenger 1: " + metro.getPassengers()[0]);
-        System.out.println("Passenger 2: " + metro.getPassengers()[1]);
-        System.out.println("Station 1: " + line1.getStations()[0]);
-        System.out.println("Station 2: " + line1.getStations()[1]);
-        System.out.println("Ticket 1 price: " + metro.getTickets()[0].getPrice());
-        System.out.println("Ticket 2 price: " + metro.getTickets()[1].getPrice());
+        System.out.println("Train 1: " + metro.getTrains().get(0));
+        System.out.println("Train 2: " + metro.getTrains().get(1));
+        System.out.println("Passenger 1: " + metro.getPassengers().get(0));
+        System.out.println("Passenger 2: " + metro.getPassengers().get(1));
+        System.out.println("Station 1: " + line1.getStations().get(0));
+        System.out.println("Station 2: " + line1.getStations().get(1));
+        System.out.println("Ticket 1 price: " + metro.getTickets().get(0).getPrice());
+        System.out.println("Ticket 2 price: " + metro.getTickets().get(1).getPrice());
 
         System.out.println("\n--- Schedule for " + line1.getLineName() + " ---");
         for (int i = 0; i < schedule.getTrainSchedules().length; i++) {

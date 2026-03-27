@@ -1,26 +1,24 @@
 package model;
 
-import exception.TrainNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Schedule {
 
-    private TrainSchedule[] trainSchedules = new TrainSchedule[0];
+    private List<TrainSchedule> trainSchedules = new ArrayList<>();
 
     public void addTrainSchedule(TrainSchedule trainSchedule) {
-        TrainSchedule[] newSchedules = new TrainSchedule[trainSchedules.length + 1];
-        System.arraycopy(trainSchedules, 0, newSchedules, 0, trainSchedules.length);
-        newSchedules[trainSchedules.length] = trainSchedule;
-        trainSchedules = newSchedules;
+        trainSchedules.add(trainSchedule);
     }
 
-    public TrainSchedule[] getTrainSchedules() { return trainSchedules; }
-
-    public TrainSchedule findByTrain(int trainNumber) throws TrainNotFoundException {
-        for (int i = 0; i < trainSchedules.length; i++) {
-            if (trainSchedules[i].getTrain().getTrainNumber() == trainNumber) {
-                return trainSchedules[i];
+    public TrainSchedule findByTrain(int trainNumber) throws exception.TrainNotFoundException {
+        for (TrainSchedule ts : trainSchedules) {
+            if (ts.getTrain().getTrainNumber() == trainNumber) {
+                return ts;
             }
         }
-        throw new TrainNotFoundException("Train " + trainNumber + " not found in schedule!");
+        throw new exception.TrainNotFoundException("Train " + trainNumber + " not found in schedule!");
     }
+
+    public List<TrainSchedule> getTrainSchedules() { return trainSchedules; }
 }

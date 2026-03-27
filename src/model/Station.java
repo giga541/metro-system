@@ -1,29 +1,26 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Station extends Infrastructure implements Scheduleable {
 
     private String location;
-    private Platform[] platforms = new Platform[0];
+    private List<Platform> platforms = new ArrayList<>();
 
     public void addPlatform(Platform platform) {
-        Platform[] newPlatforms = new Platform[platforms.length + 1];
-        System.arraycopy(platforms, 0, newPlatforms, 0, platforms.length);
-        newPlatforms[platforms.length] = platform;
-        platforms = newPlatforms;
+        platforms.add(platform);
     }
 
-    public Platform[] getPlatforms() {
-        return platforms;
+    @Override
+    public void addToSchedule() {
+        System.out.println("Station " + location + " added to schedule");
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
+    @Override
+    public String getScheduleInfo() {
+        return "Station: " + location + " in " + getCity();
     }
 
     @Override
@@ -44,13 +41,7 @@ public class Station extends Infrastructure implements Scheduleable {
         return Objects.hash(location);
     }
 
-    @Override
-    public void addToSchedule() {
-        System.out.println("Station " + location + " added to schedule");
-    }
-
-    @Override
-    public String getScheduleInfo() {
-        return "Station: " + location + " in " + getCity();
-    }
+    public List<Platform> getPlatforms() { return platforms; }
+    public String getLocation() { return location; }
+    public void setLocation(String location) { this.location = location; }
 }

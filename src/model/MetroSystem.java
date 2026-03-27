@@ -1,51 +1,120 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 public class MetroSystem {
 
-    private Vehicle[] vehicles = new Vehicle[0];
-    private Train[] trains = new Train[0];
-    private Passenger[] passengers = new Passenger[0];
-    private Line[] lines = new Line[0];
-    private Ticket[] tickets = new Ticket[0];
+    private static final String METRO_SYSTEM_NAME = "Tbilisi Metro";
 
-    public void addVehicle(Vehicle vehicle) {
-        Vehicle[] newVehicles = new Vehicle[vehicles.length + 1];
-        System.arraycopy(vehicles, 0, newVehicles, 0, vehicles.length);
-        newVehicles[vehicles.length] = vehicle;
-        vehicles = newVehicles;
+    static {
+        System.out.println("MetroSystem class loaded!");
+        System.out.println("Welcome to " + METRO_SYSTEM_NAME);
+    }
+
+    private List<Train> trains = new ArrayList<>();
+    private List<Passenger> passengers = new ArrayList<>();
+    private List<Ticket> tickets = new ArrayList<>();
+
+    private Set<Line> lines = new HashSet<>();
+
+    private Map<Integer, Train> trainMap = new HashMap<>();
+
+    public static String getMetroSystemName() {
+        return METRO_SYSTEM_NAME;
     }
 
     public void addTrain(Train train) {
-        Train[] newTrains = new Train[trains.length + 1];
-        System.arraycopy(trains, 0, newTrains, 0, trains.length);
-        newTrains[trains.length] = train;
-        trains = newTrains;
+        trains.add(train);
+        trainMap.put(train.getTrainNumber(), train); // also add to map
     }
 
     public void addPassenger(Passenger passenger) {
-        Passenger[] newPassengers = new Passenger[passengers.length + 1];
-        System.arraycopy(passengers, 0, newPassengers, 0, passengers.length);
-        newPassengers[passengers.length] = passenger;
-        passengers = newPassengers;
-    }
-
-    public void addLine(Line line) {
-        Line[] newLines = new Line[lines.length + 1];
-        System.arraycopy(lines, 0, newLines, 0, lines.length);
-        newLines[lines.length] = line;
-        lines = newLines;
+        passengers.add(passenger);
     }
 
     public void addTicket(Ticket ticket) {
-        Ticket[] newTickets = new Ticket[tickets.length + 1];
-        System.arraycopy(tickets, 0, newTickets, 0, tickets.length);
-        newTickets[tickets.length] = ticket;
-        tickets = newTickets;
+        tickets.add(ticket);
     }
 
-    public Vehicle[] getVehicles() { return vehicles; }
-    public Train[] getTrains() { return trains; }
-    public Passenger[] getPassengers() { return passengers; }
-    public Line[] getLines() { return lines; }
-    public Ticket[] getTickets() { return tickets; }
+    public void addLine(Line line) {
+        lines.add(line);
+    }
+
+    public void addVehicle(Vehicle vehicle) {
+
+    }
+
+    public void printSystemInfo() {
+
+        System.out.println("Total trains: " + trains.size());
+        System.out.println("Total passengers: " + passengers.size());
+        System.out.println("Total tickets: " + tickets.size());
+        System.out.println("Total lines: " + lines.size());
+
+        System.out.println("No trains? " + trains.isEmpty());
+
+        // get() - first element from List
+        if (!trains.isEmpty()) {
+            System.out.println("First train: " + trains.get(0));
+        }
+
+        // get from Map by key
+        Train foundTrain = trainMap.get(101);
+        if (foundTrain != null) {
+            System.out.println("Train from map: " + foundTrain);
+        }
+
+        // iterate List
+        System.out.println("\n--- All Trains ---");
+        for (Train train : trains) {
+            System.out.println(train);
+        }
+
+        // iterate Set
+        System.out.println("\n--- All Lines ---");
+        for (Line line : lines) {
+            System.out.println(line.getLineName());
+        }
+
+        // iterate Map
+        System.out.println("\n--- Train Map ---");
+        for (Map.Entry<Integer, Train> entry : trainMap.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + " -> " + entry.getValue());
+        }
+
+        // remove()
+        if (!passengers.isEmpty()) {
+            passengers.remove(0);
+            System.out.println("Removed first passenger, remaining: " + passengers.size());
+        }
+    }
+
+    // retrieve first element from each collection type
+    public void printFirstElements() {
+
+        if (!trains.isEmpty()) {
+            System.out.println("First train: " + trains.get(0));
+        }
+
+        if (!lines.isEmpty()) {
+            Line firstLine = lines.iterator().next();
+            System.out.println("First line: " + firstLine.getLineName());
+        }
+
+        if (!trainMap.isEmpty()) {
+            Map.Entry<Integer, Train> firstEntry = trainMap.entrySet().iterator().next();
+            System.out.println("First map entry: " + firstEntry.getKey() + " -> " + firstEntry.getValue());
+        }
+    }
+
+    public List<Train> getTrains() { return trains; }
+    public List<Passenger> getPassengers() { return passengers; }
+    public List<Ticket> getTickets() { return tickets; }
+    public Set<Line> getLines() { return lines; }
+    public Map<Integer, Train> getTrainMap() { return trainMap; }
 }
