@@ -180,5 +180,21 @@ public class Main {
         } finally {
             System.out.println("Schedule search finished");
         }
+
+        Pair<Passenger, Ticket> passengerTicket1 = new Pair<>(passenger1, ticket1);
+        Pair<Passenger, Ticket> passengerTicket2 = new Pair<>(passenger2, ticket2);
+
+        System.out.println("Passenger: " + passengerTicket1.getFirst().getName()
+                + " | Ticket price: " + passengerTicket1.getSecond().getPrice());
+        System.out.println("Passenger: " + passengerTicket2.getFirst().getName()
+                + " | Ticket price: " + passengerTicket2.getSecond().getPrice());
+
+        Container<Train> activeTrain = new Container<>("Active", train1);
+        Container<Train> maintenanceTrain = new Container<>("Under Maintenance", train2);
+
+        System.out.println("Train status: " + activeTrain.getLabel()
+                + " -> " + activeTrain.getItem().getTrainNumber());
+        System.out.println("Train status: " + maintenanceTrain.getLabel()
+                + " -> " + maintenanceTrain.getItem().getTrainNumber());
     }
 }
