@@ -1,5 +1,6 @@
 package model;
 
+import enums.StationType;
 import interfaces.Scheduleable;
 
 import java.util.ArrayList;
@@ -46,4 +47,9 @@ public class Station extends Infrastructure implements Scheduleable {
     public List<Platform> getPlatforms() { return platforms; }
     public String getLocation() { return location; }
     public void setLocation(String location) { this.location = location; }
+
+    private StationType stationType;
+
+    public StationType getStationType() { return stationType; }
+    public void setStationType(StationType stationType) { this.stationType = stationType; }
 }

@@ -1,5 +1,6 @@
 package model;
 
+import enums.TicketType;
 import interfaces.Bookable;
 import interfaces.Payable;
 
@@ -49,4 +50,9 @@ public class Ticket implements Bookable, Payable {
     public void setPurchaseTime(LocalDateTime purchaseTime) {
         this.purchaseTime = purchaseTime;
     }
+
+    private TicketType ticketType;
+
+    public TicketType getTicketType() { return ticketType; }
+    public void setTicketType(TicketType ticketType) { this.ticketType = ticketType; }
 }

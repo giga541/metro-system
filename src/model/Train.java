@@ -1,5 +1,6 @@
 package model;
 
+import enums.TrainStatus;
 import interfaces.Identifiable;
 import interfaces.Moveable;
 
@@ -84,5 +85,15 @@ public class Train extends Vehicle implements Moveable, Identifiable {
                 ", driver=" + driver +
                 ", speed=" + speed +
                 '}';
+    }
+
+    private TrainStatus status;
+
+    public TrainStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TrainStatus status) {
+        this.status = status;
     }
 }

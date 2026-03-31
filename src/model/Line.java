@@ -1,5 +1,6 @@
 package model;
 
+import enums.LineColor;
 import interfaces.Scheduleable;
 
 import java.util.ArrayList;
@@ -44,4 +45,14 @@ public class Line extends Transport implements Scheduleable {
     public void setLineName(String lineName) { this.lineName = lineName; }
     public Schedule getSchedule() { return schedule; }
     public void setSchedule(Schedule schedule) { this.schedule = schedule; }
+
+    private LineColor color;
+
+    public LineColor getColor() {
+        return color;
+    }
+
+    public void setColor(LineColor color) {
+        this.color = color;
+    }
 }

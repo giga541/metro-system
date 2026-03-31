@@ -1,3 +1,4 @@
+import enums.*;
 import exception.TicketBookingException;
 import exception.TrainNotFoundException;
 import interfaces.Bookable;
@@ -41,6 +42,11 @@ public class Main {
         train2.setTrainNumber(102);
         train2.setCapacity(80);
         train1.setSpeed(speed);
+        train1.setStatus(TrainStatus.ACTIVE);
+        train2.setStatus(TrainStatus.MAINTENANCE);
+        System.out.println(train1.getTrainNumber() + " status: " + train1.getStatus().getDescription());
+        System.out.println(train2.getTrainNumber() + " status: " + train2.getStatus().getDescription());
+        System.out.println("Is train1 available? " + train1.getStatus().isAvailable());
 
         // Tickets
         Ticket ticket1 = new Ticket();
@@ -49,6 +55,10 @@ public class Main {
         Ticket ticket2 = new Ticket();
         ticket2.setPrice(new BigDecimal("3.50"));
         ticket2.setPurchaseTime(LocalDateTime.now());
+        ticket1.setTicketType(TicketType.SINGLE);
+        ticket2.setTicketType(TicketType.MONTHLY);
+        System.out.println("Ticket type: " + ticket1.getTicketType().getDescription());
+        System.out.println("Is unlimited? " + ticket2.getTicketType().isUnlimited());
 
         // Booking - checked exception with finally
         Booking booking = new Booking();
@@ -83,6 +93,9 @@ public class Main {
         station2.setLocation("North Station");
         station2.setCity("Tbilisi");
         station2.addPlatform(platform2);
+        station1.setStationType(StationType.TERMINAL);
+        station2.setStationType(StationType.JUNCTION);
+        System.out.println("Station type: " + station1.getStationType().getInfo());
 
         // Schedule
         Schedule schedule = new Schedule();
@@ -97,6 +110,13 @@ public class Main {
         line1.addStation(station2);
         Line line2 = new Line();
         line2.setLineName("Blue Line");
+        line1.setColor(LineColor.RED);
+        System.out.println("Line color: " + line1.getColor().getDisplayName());
+
+        //payment
+        Payment payment = new Payment();
+        payment.setPaymentMethod(PaymentMethod.CARD);
+        System.out.println("Payment: " + payment.getPaymentMethod().getPaymentInfo());
 
         // Metro System
         MetroSystem metro = new MetroSystem();
