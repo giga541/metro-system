@@ -1,7 +1,9 @@
 package service;
 
 import enums.TrainStatus;
-import interfaces.MetroLambdas;
+import interfaces.PassengerAction;
+import interfaces.TicketValidator;
+import interfaces.TrainFilter;
 import model.*;
 
 import java.util.ArrayList;
@@ -9,6 +11,16 @@ import java.util.List;
 import java.util.function.*;
 
 public class MetroService {
+
+    public boolean validateTicket(Ticket ticket, TicketValidator validator) {
+        return validator.validate(ticket);
+    }
+
+    public void performOnPassengers(List<Passenger> passengers, PassengerAction action) {
+        for (Passenger passenger : passengers) {
+            action.perform(passenger);
+        }
+    }
 
     // Predicate - filter trains by capacity
     public List<Train> getTrainsWithMinCapacity(List<Train> trains, int minCapacity) {
@@ -53,17 +65,16 @@ public class MetroService {
 
     // custom lambda - TicketValidator
     public boolean validateTicket(Ticket ticket) {
-        MetroLambdas.TicketValidator validator = t ->
+        TicketValidator validator = t ->
                 t.getPrice() != null && t.getAmount().doubleValue() > 0 && t.isAvailable();
         return validator.validate(ticket);
     }
 
     // custom lambda - TrainFilter
-    public List<Train> filterActiveTrains(List<Train> trains) {
-        MetroLambdas.TrainFilter activeFilter = train -> train.getStatus() == TrainStatus.ACTIVE;
+    public List<Train> filterTrains(List<Train> trains, TrainFilter filter) {
         List<Train> result = new ArrayList<>();
         for (Train train : trains) {
-            if (activeFilter.filter(train)) {
+            if (filter.filter(train)) {
                 result.add(train);
             }
         }
@@ -72,10 +83,16 @@ public class MetroService {
 
     // custom lambda - PassengerAction
     public void performOnPassengers(List<Passenger> passengers) {
-        MetroLambdas.PassengerAction action = passenger ->
+        PassengerAction action = passenger ->
                 System.out.println("Processing passenger: " + passenger.getName());
         for (Passenger passenger : passengers) {
             action.perform(passenger);
         }
+    }
+
+    public void runTask(Runnable task) {
+        System.out.println("Starting task...");
+        task.run();
+        System.out.println("Task finished.");
     }
 }

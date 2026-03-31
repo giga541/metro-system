@@ -172,7 +172,6 @@ public class Main {
 
         // interfaces - polymorphism via method parameter
         Booking book = new Booking();
-
         book.startMoving(train1);
         book.processPayment(ticket1);
         book.showScheduleInfo(line1);
@@ -207,9 +206,9 @@ public class Main {
             System.out.println("Schedule search finished");
         }
 
+        // Generics
         Pair<Passenger, Ticket> passengerTicket1 = new Pair<>(passenger1, ticket1);
         Pair<Passenger, Ticket> passengerTicket2 = new Pair<>(passenger2, ticket2);
-
         System.out.println("Passenger: " + passengerTicket1.getFirst().getName()
                 + " | Ticket price: " + passengerTicket1.getSecond().getPrice());
         System.out.println("Passenger: " + passengerTicket2.getFirst().getName()
@@ -217,20 +216,23 @@ public class Main {
 
         Container<Train> activeTrain = new Container<>("Active", train1);
         Container<Train> maintenanceTrain = new Container<>("Under Maintenance", train2);
-
         System.out.println("Train status: " + activeTrain.getLabel()
                 + " -> " + activeTrain.getItem().getTrainNumber());
         System.out.println("Train status: " + maintenanceTrain.getLabel()
                 + " -> " + maintenanceTrain.getItem().getTrainNumber());
 
-        // MetroService - lambdas
+        // MetroService
         MetroService metroService = new MetroService();
+
+        // Runnable
+        System.out.println("\n--- Runnable Tasks ---");
+        metroService.runTask(() -> System.out.println("Checking all train statuses..."));
+        metroService.runTask(() -> metro.printSystemInfo());
 
         // Predicate
         System.out.println("\n--- Trains with capacity >= 60 ---");
         List<Train> bigTrains = metroService.getTrainsWithMinCapacity(metro.getTrains(), 60);
-        for (
-                Train t : bigTrains) {
+        for (Train t : bigTrains) {
             System.out.println(t.getTrainNumber() + " capacity: " + t.getCapacity());
         }
 
@@ -251,18 +253,48 @@ public class Main {
         System.out.println("\n--- Total Price with Service Fee ---");
         System.out.println("Total: " + metroService.calculateTotalPrice(passenger1, ticket1));
 
-        // custom lambdas
-        System.out.println("\n--- Ticket Validation ---");
-        System.out.println("Ticket1 valid? " + metroService.validateTicket(ticket1));
 
-        System.out.println("\n--- Active Trains ---");
-        List<Train> activeTrains = metroService.filterActiveTrains(metro.getTrains());
-        for (
-                Train t : activeTrains) {
+        System.out.println("\n--- Filter Trains (caller decides) ---");
+        List<Train> activeTrains = metroService.filterTrains(
+                metro.getTrains(),
+                t -> t.getStatus() == TrainStatus.ACTIVE
+        );
+        List<Train> highCapacityTrains = metroService.filterTrains(
+                metro.getTrains(),
+                t -> t.getCapacity() >= 60
+        );
+        List<Train> specificTrain = metroService.filterTrains(
+                metro.getTrains(),
+                t -> t.getTrainNumber() == 101
+        );
+        for (Train t : activeTrains) {
             System.out.println("Active train: " + t.getTrainNumber());
         }
+        for (Train t : highCapacityTrains) {
+            System.out.println("High capacity train: " + t.getTrainNumber());
+        }
+        for (Train t : specificTrain) {
+            System.out.println("Specific train: " + t.getTrainNumber());
+        }
 
-        System.out.println("\n--- Passenger Actions ---");
-        metroService.performOnPassengers(metro.getPassengers());
+        System.out.println("\n--- Validate Tickets (caller decides) ---");
+        System.out.println("Ticket1 valid? " + metroService.validateTicket(
+                ticket1,
+                t -> t.getPrice() != null && t.getAmount().doubleValue() > 0 && t.isAvailable()
+        ));
+        System.out.println("Ticket2 valid? " + metroService.validateTicket(
+                ticket2,
+                t -> t.getTicketType() == TicketType.MONTHLY
+        ));
+
+        System.out.println("\n--- Passenger Actions (caller decides) ---");
+        metroService.performOnPassengers(
+                metro.getPassengers(),
+                p -> System.out.println("Boarding: " + p.getName())
+        );
+        metroService.performOnPassengers(
+                metro.getPassengers(),
+                p -> System.out.println("Checking ticket for: " + p.getName())
+        );
     }
 }
