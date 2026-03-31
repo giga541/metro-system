@@ -1,4 +1,4 @@
-package model;
+package constants;
 
 public final class Constants {
 

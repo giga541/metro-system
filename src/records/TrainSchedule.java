@@ -1,4 +1,6 @@
-package model;
+package records;
+
+import model.Train;
 
 import java.time.LocalDateTime;
 

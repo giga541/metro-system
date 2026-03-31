@@ -1,5 +1,7 @@
 package model;
 
+import records.TrainSchedule;
+
 import java.util.ArrayList;
 import java.util.List;
 
