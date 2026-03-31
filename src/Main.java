@@ -5,10 +5,12 @@ import interfaces.Bookable;
 import interfaces.Identifiable;
 import model.*;
 import service.Booking;
+import service.MetroService;
 import service.MetroSystemSession;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -218,5 +220,47 @@ public class Main {
                 + " -> " + activeTrain.getItem().getTrainNumber());
         System.out.println("Train status: " + maintenanceTrain.getLabel()
                 + " -> " + maintenanceTrain.getItem().getTrainNumber());
+
+        // MetroService - lambdas
+        MetroService metroService = new MetroService();
+
+        // Predicate
+        System.out.println("\n--- Trains with capacity >= 60 ---");
+        List<Train> bigTrains = metroService.getTrainsWithMinCapacity(metro.getTrains(), 60);
+        for (
+                Train t : bigTrains) {
+            System.out.println(t.getTrainNumber() + " capacity: " + t.getCapacity());
+        }
+
+        // Function
+        System.out.println("\n--- Train Summaries ---");
+        System.out.println(metroService.getTrainSummary(train1));
+        System.out.println(metroService.getTrainSummary(train2));
+
+        // Consumer
+        System.out.println("\n--- All Passengers ---");
+        metroService.printAllPassengers(metro.getPassengers());
+
+        // Supplier
+        System.out.println("\n--- Default Ticket Price ---");
+        System.out.println("Default price: " + metroService.getDefaultTicketPrice());
+
+        // BiFunction
+        System.out.println("\n--- Total Price with Service Fee ---");
+        System.out.println("Total: " + metroService.calculateTotalPrice(passenger1, ticket1));
+
+        // custom lambdas
+        System.out.println("\n--- Ticket Validation ---");
+        System.out.println("Ticket1 valid? " + metroService.validateTicket(ticket1));
+
+        System.out.println("\n--- Active Trains ---");
+        List<Train> activeTrains = metroService.filterActiveTrains(metro.getTrains());
+        for (
+                Train t : activeTrains) {
+            System.out.println("Active train: " + t.getTrainNumber());
+        }
+
+        System.out.println("\n--- Passenger Actions ---");
+        metroService.performOnPassengers(metro.getPassengers());
     }
 }
