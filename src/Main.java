@@ -145,9 +145,9 @@ public class Main {
 
         System.out.println("\n--- Schedule for " + line1.getLineName() + " ---");
         for (TrainSchedule ts : schedule.getTrainSchedules()) {
-            System.out.println("Train: " + ts.getTrain().getTrainNumber()
-                    + " | Arrival: " + ts.getArrivalTime()
-                    + " | Departure: " + ts.getDepartureTime());
+            System.out.println("Train: " + ts.train().getTrainNumber()
+                    + " | Arrival: " + ts.arrivalTime()
+                    + " | Departure: " + ts.departureTime());
         }
 
         System.out.println("\n--- Polymorphism ---");
@@ -194,9 +194,9 @@ public class Main {
         // find a specific train's schedule - checked exception with finally
         try {
             TrainSchedule ts = schedule.findByTrain(101);
-            System.out.println("Train: " + ts.getTrain().getTrainNumber());
-            System.out.println("Arrives at: " + ts.getArrivalTime());
-            System.out.println("Departs at: " + ts.getDepartureTime());
+            System.out.println("Train: " + ts.train().getTrainNumber());
+            System.out.println("Arrives at: " + ts.arrivalTime());
+            System.out.println("Departs at: " + ts.departureTime());
         } catch (TrainNotFoundException e) {
             System.out.println("Error: " + e.getMessage());
         } finally {

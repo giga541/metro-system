@@ -13,7 +13,7 @@ public class Schedule {
 
     public TrainSchedule findByTrain(int trainNumber) throws exception.TrainNotFoundException {
         for (TrainSchedule ts : trainSchedules) {
-            if (ts.getTrain().getTrainNumber() == trainNumber) {
+            if (ts.train().getTrainNumber() == trainNumber) {
                 return ts;
             }
         }
