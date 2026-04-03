@@ -1,17 +1,21 @@
 package model;
 
+import annotations.MetroInfo;
 import enums.TrainStatus;
 import interfaces.Identifiable;
 import interfaces.Moveable;
 
 import java.util.Objects;
 
+@MetroInfo(description = "Represents a metro train", author = "Giga")
 public class Train extends Vehicle implements Moveable, Identifiable {
 
+    @MetroInfo(description = "Unique train number")
     private int trainNumber;
     private int capacity;
     private Driver driver;
     private Speed speed;
+    private TrainStatus status;
 
     @Override
     public void move() {
@@ -28,41 +32,10 @@ public class Train extends Vehicle implements Moveable, Identifiable {
         return trainNumber;
     }
 
+    @MetroInfo(description = "Returns train type")
     @Override
     public String getType() {
         return "Train";
-    }
-
-    public int getTrainNumber() {
-        return trainNumber;
-    }
-
-    public void setTrainNumber(int trainNumber) {
-        this.trainNumber = trainNumber;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public Driver getDriver() {
-        return driver;
-    }
-
-    public void setDriver(Driver driver) {
-        this.driver = driver;
-    }
-
-    public Speed getSpeedObject() {
-        return speed;
-    }
-
-    public void setSpeed(Speed speed) {
-        this.speed = speed;
     }
 
     @Override
@@ -87,13 +60,18 @@ public class Train extends Vehicle implements Moveable, Identifiable {
                 '}';
     }
 
-    private TrainStatus status;
+    public int getTrainNumber() { return trainNumber; }
+    public void setTrainNumber(int trainNumber) { this.trainNumber = trainNumber; }
 
-    public TrainStatus getStatus() {
-        return status;
-    }
+    public int getCapacity() { return capacity; }
+    public void setCapacity(int capacity) { this.capacity = capacity; }
 
-    public void setStatus(TrainStatus status) {
-        this.status = status;
-    }
+    public Driver getDriver() { return driver; }
+    public void setDriver(Driver driver) { this.driver = driver; }
+
+    public Speed getSpeedObject() { return speed; }
+    public void setSpeed(Speed speed) { this.speed = speed; }
+
+    public TrainStatus getStatus() { return status; }
+    public void setStatus(TrainStatus status) { this.status = status; }
 }
