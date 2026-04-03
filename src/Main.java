@@ -9,6 +9,7 @@ import records.TrainSchedule;
 import service.Booking;
 import service.MetroService;
 import service.MetroSystemSession;
+import service.ReflectionService;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -300,5 +301,11 @@ public class Main {
         System.out.println("\n--- System Info ---");
         metro.printSystemInfo();
         metro.printFirstElements();
+
+        // Reflection
+        ReflectionService reflectionService = new ReflectionService();
+        reflectionService.extractInfo(Train.class);
+        reflectionService.createObjectAndCallMethod();
+
     }
 }
