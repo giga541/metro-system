@@ -69,21 +69,21 @@ public class MetroSystem {
 
         // iterate List
         System.out.println("\n--- All Trains ---");
-        for (Train train : trains) {
-            System.out.println(train);
-        }
+        trains.stream()
+                .map(Train::toString)
+                .forEach(System.out::println);
 
         // iterate Set
         System.out.println("\n--- All Lines ---");
-        for (Line line : lines) {
-            System.out.println(line.getLineName());
-        }
+        lines.stream()
+                .map(Line::getLineName)
+                .forEach(System.out::println);
 
         // iterate Map
         System.out.println("\n--- Train Map ---");
-        for (Map.Entry<Integer, Train> entry : trainMap.entrySet()) {
-            System.out.println("Key: " + entry.getKey() + " -> " + entry.getValue());
-        }
+        trainMap.entrySet().stream()
+                .map(e -> "Key: " + e.getKey() + " -> " + e.getValue())
+                .forEach(System.out::println);
 
         // remove()
         if (!passengers.isEmpty()) {

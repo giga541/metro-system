@@ -296,5 +296,9 @@ public class Main {
                 metro.getPassengers(),
                 p -> System.out.println("Checking ticket for: " + p.getName())
         );
+
+        System.out.println("\n--- System Info ---");
+        metro.printSystemInfo();
+        metro.printFirstElements();
     }
 }

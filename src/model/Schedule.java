@@ -1,5 +1,6 @@
 package model;
 
+import exception.TrainNotFoundException;
 import records.TrainSchedule;
 
 import java.util.ArrayList;
@@ -14,12 +15,10 @@ public class Schedule {
     }
 
     public TrainSchedule findByTrain(int trainNumber) throws exception.TrainNotFoundException {
-        for (TrainSchedule ts : trainSchedules) {
-            if (ts.train().getTrainNumber() == trainNumber) {
-                return ts;
-            }
-        }
-        throw new exception.TrainNotFoundException("Train " + trainNumber + " not found in schedule!");
+        return trainSchedules.stream()
+                .filter(ts -> ts.train().getTrainNumber() == trainNumber)
+                .findFirst()
+                .orElseThrow(() -> new TrainNotFoundException("Train " + trainNumber + " not found!"));
     }
 
     public List<TrainSchedule> getTrainSchedules() { return trainSchedules; }

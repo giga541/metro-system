@@ -9,6 +9,7 @@ import model.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.*;
+import java.util.stream.Collectors;
 
 public class MetroService {
 
@@ -17,21 +18,16 @@ public class MetroService {
     }
 
     public void performOnPassengers(List<Passenger> passengers, PassengerAction action) {
-        for (Passenger passenger : passengers) {
-            action.perform(passenger);
-        }
+        passengers.stream()
+                .forEach(action::perform);
     }
 
     // Predicate - filter trains by capacity
     public List<Train> getTrainsWithMinCapacity(List<Train> trains, int minCapacity) {
         Predicate<Train> hasEnoughCapacity = train -> train.getCapacity() >= minCapacity;
-        List<Train> result = new ArrayList<>();
-        for (Train train : trains) {
-            if (hasEnoughCapacity.test(train)) {
-                result.add(train);
-            }
-        }
-        return result;
+        return trains.stream()
+                .filter(hasEnoughCapacity)
+                .collect(Collectors.toList());
     }
 
     // Function - convert Train to summary String
@@ -45,9 +41,8 @@ public class MetroService {
     public void printAllPassengers(List<Passenger> passengers) {
         Consumer<Passenger> printPassenger = p ->
                 System.out.println("Passenger: " + p.getName() + " | Seat: " + p.getSeatNumber());
-        for (Passenger passenger : passengers) {
-            printPassenger.accept(passenger);
-        }
+        passengers.stream()
+                .forEach(printPassenger);
     }
 
     // Supplier - supply default ticket price
@@ -63,31 +58,11 @@ public class MetroService {
         return calculatePrice.apply(passenger, ticket);
     }
 
-    // custom lambda - TicketValidator
-    public boolean validateTicket(Ticket ticket) {
-        TicketValidator validator = t ->
-                t.getPrice() != null && t.getAmount().doubleValue() > 0 && t.isAvailable();
-        return validator.validate(ticket);
-    }
-
     // custom lambda - TrainFilter
     public List<Train> filterTrains(List<Train> trains, TrainFilter filter) {
-        List<Train> result = new ArrayList<>();
-        for (Train train : trains) {
-            if (filter.filter(train)) {
-                result.add(train);
-            }
-        }
-        return result;
-    }
-
-    // custom lambda - PassengerAction
-    public void performOnPassengers(List<Passenger> passengers) {
-        PassengerAction action = passenger ->
-                System.out.println("Processing passenger: " + passenger.getName());
-        for (Passenger passenger : passengers) {
-            action.perform(passenger);
-        }
+        return trains.stream()
+                .filter(filter::filter)
+                .collect(Collectors.toList());
     }
 
     public void runTask(Runnable task) {
