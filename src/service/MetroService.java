@@ -18,8 +18,7 @@ public class MetroService {
     }
 
     public void performOnPassengers(List<Passenger> passengers, PassengerAction action) {
-        passengers.stream()
-                .forEach(action::perform);
+        passengers.forEach(action::perform);
     }
 
     // Predicate - filter trains by capacity
@@ -41,8 +40,7 @@ public class MetroService {
     public void printAllPassengers(List<Passenger> passengers) {
         Consumer<Passenger> printPassenger = p ->
                 System.out.println("Passenger: " + p.getName() + " | Seat: " + p.getSeatNumber());
-        passengers.stream()
-                .forEach(printPassenger);
+        passengers.forEach(printPassenger);
     }
 
     // Supplier - supply default ticket price

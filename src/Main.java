@@ -14,6 +14,7 @@ import service.ReflectionService;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
@@ -307,5 +308,21 @@ public class Main {
         reflectionService.extractInfo(Train.class);
         reflectionService.createObjectAndCallMethod();
 
+        // Optional
+        Optional<Train> optionalTrain = reflectionService.createTrainWithReflection();
+
+        // handle it
+        if (optionalTrain.isPresent()) {
+            System.out.println("Train created via reflection: " + optionalTrain.get().getTrainNumber());
+        } else {
+            System.out.println("Train could not be created");
+        }
+
+        //using ifPresent with lambda
+        optionalTrain.ifPresent(t -> System.out.println("Train type: " + t.getType()));
+
+        //using orElse
+        Train trainOrDefault = optionalTrain.orElse(new Train());
+        System.out.println("Train number: " + trainOrDefault.getTrainNumber());
     }
 }
