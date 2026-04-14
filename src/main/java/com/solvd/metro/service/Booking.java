@@ -5,10 +5,14 @@ import com.solvd.metro.interfaces.Payable;
 import com.solvd.metro.model.*;
 import com.solvd.metro.interfaces.Scheduleable;
 import com.solvd.metro.interfaces.Moveable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 
 public class Booking {
+
+    private static final Logger logger = LogManager.getLogger(Booking.class);
 
     public void bookTicket(Passenger passenger, Train train, Ticket ticket) throws TicketBookingException {
 
@@ -30,35 +34,35 @@ public class Booking {
 
         try {
             ticket.book();
-            System.out.println("Ticket booked for " + passenger.getName());
-            System.out.println("Train number: " + train.getTrainNumber());
-            System.out.println("Price: " + ticket.getPrice());
+            logger.info("Ticket booked for {}", passenger.getName());
+            logger.info("Train number: {}", train.getTrainNumber());
+            logger.info("Price: {}", ticket.getPrice());
         } catch (Exception e) {
             throw new TicketBookingException("Booking failed unexpectedly: " + e.getMessage());
         }
 
         ticket.book();
-        System.out.println("Ticket booked for " + passenger.getName());
-        System.out.println("Train number: " + train.getTrainNumber());
-        System.out.println("Price: " + ticket.getPrice());
+        logger.info("Ticket booked for {}", passenger.getName());
+        logger.info("Train number: {}", train.getTrainNumber());
+        logger.info("Price: ", ticket.getPrice());
     }
 
     public void processPayment(Payable payable) {
-        System.out.println("Amount to pay: " + payable.getAmount());
+        logger.info("Amount to pay: {}", payable.getAmount());
         payable.processPayment();
     }
 
     public void startMoving(Moveable moveable) {
         moveable.move();
-        System.out.println("Moving at speed: " + moveable.getSpeed());
+        logger.info("Moving at speed: {}", moveable.getSpeed());
     }
 
     public void showScheduleInfo(Scheduleable schedulable) {
         schedulable.addToSchedule();
-        System.out.println(schedulable.getScheduleInfo());
+        logger.info(schedulable.getScheduleInfo());
     }
 
     public void printVehicleType(Vehicle vehicle) {
-        System.out.println("Vehicle type: " + vehicle.getType());
+        logger.info("Vehicle type: {}", vehicle.getType());
     }
 }

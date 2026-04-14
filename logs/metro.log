@@ -1,0 +1,416 @@
+19:21:15.654 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+19:21:47.917 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 
+19:22:07.571 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90 some:
+19:22:17.541 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90 some:{}
+19:22:37.923 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90 some:model3
+19:37:59.802 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+19:37:59.807 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+19:37:59.807 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+19:37:59.808 [main] INFO  com.solvd.metro.Main - DriverId: 1
+19:37:59.808 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+19:37:59.854 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:37:59.855 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:37:59.855 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+19:37:59.855 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:37:59.855 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:37:59.856 [main] INFO  com.solvd.metro.service.Booking - Price: 
+19:37:59.880 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+19:37:59.881 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+19:37:59.885 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+19:38:16.178 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+19:38:16.183 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+19:38:16.183 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+19:38:16.183 [main] INFO  com.solvd.metro.Main - DriverId: 1
+19:38:16.183 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+19:38:16.191 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:38:16.191 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:38:16.192 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+19:38:16.192 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:38:16.192 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:38:16.192 [main] INFO  com.solvd.metro.service.Booking - Price: 
+19:38:16.212 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+19:38:16.213 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+19:38:16.216 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+19:39:37.393 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+19:39:37.399 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+19:39:37.399 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+19:39:37.399 [main] INFO  com.solvd.metro.Main - DriverId: 1
+19:39:37.400 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+19:39:37.410 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:39:37.411 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:39:37.411 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:39:37.411 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+19:39:37.411 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:39:37.411 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:39:37.412 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:39:37.412 [main] INFO  com.solvd.metro.service.Booking - Price: 
+19:39:37.434 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+19:39:37.434 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+19:39:37.437 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+19:39:37.438 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:53:33.572 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+19:53:33.578 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+19:53:33.578 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+19:53:33.578 [main] INFO  com.solvd.metro.Main - DriverId: 1
+19:53:33.578 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+19:53:33.589 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:53:33.590 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:53:33.590 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:53:33.590 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+19:53:33.590 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:53:33.590 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:53:33.591 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:53:33.591 [main] INFO  com.solvd.metro.service.Booking - Price: 
+19:53:33.613 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+19:53:33.614 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+19:53:33.618 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+19:53:33.619 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:53:33.640 [main] INFO  com.solvd.metro.service.ReflectionService - 
+ Reflection Info: Train
+19:54:04.901 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+19:54:04.908 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+19:54:04.908 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+19:54:04.909 [main] INFO  com.solvd.metro.Main - DriverId: 1
+19:54:04.909 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+19:54:04.917 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:54:04.917 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:54:04.917 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:54:04.917 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+19:54:04.917 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:54:04.917 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:54:04.918 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:54:04.918 [main] INFO  com.solvd.metro.service.Booking - Price: 
+19:54:04.940 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+19:54:04.940 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+19:54:04.944 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+19:54:04.945 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:54:04.965 [main] INFO  com.solvd.metro.service.ReflectionService - 
+ Reflection Info: Train
+19:56:05.902 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+19:56:05.907 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+19:56:05.907 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+19:56:05.907 [main] INFO  com.solvd.metro.Main - DriverId: 1
+19:56:05.907 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+19:56:05.916 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:56:05.916 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:56:05.917 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:56:05.917 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+19:56:05.917 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:56:05.917 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+19:56:05.917 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+19:56:05.917 [main] INFO  com.solvd.metro.service.Booking - Price: 
+19:56:05.939 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+19:56:05.939 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+19:56:05.944 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+19:56:05.945 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+19:56:05.964 [main] INFO  com.solvd.metro.service.ReflectionService - 
+ Reflection Info: Train
+19:56:05.965 [main] INFO  com.solvd.metro.service.ReflectionService - Description Represents a metro train
+19:56:05.966 [main] INFO  com.solvd.metro.service.ReflectionService - Author: Giga
+20:01:51.643 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+20:01:51.647 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+20:01:51.648 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+20:01:51.648 [main] INFO  com.solvd.metro.Main - DriverId: 1
+20:01:51.648 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+20:01:51.658 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:01:51.658 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+20:01:51.658 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+20:01:51.659 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+20:01:51.659 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:01:51.659 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+20:01:51.659 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+20:01:51.659 [main] INFO  com.solvd.metro.service.Booking - Price: 
+20:01:51.660 [main] INFO  com.solvd.metro.service.MetroSystemSession - Session opened: com.solvd.metro.Main Session
+20:01:51.683 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+20:01:51.684 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+20:01:51.687 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+20:01:51.688 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:01:51.691 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+20:01:51.692 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+20:01:51.692 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+20:01:51.696 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+20:01:51.701 [main] INFO  com.solvd.metro.service.MetroService - Passenger: John Seat: B2
+20:01:51.708 [main] INFO  com.solvd.metro.service.ReflectionService - 
+ Reflection Info: Train
+20:01:51.709 [main] INFO  com.solvd.metro.service.ReflectionService - Description Represents a metro train
+20:01:51.709 [main] INFO  com.solvd.metro.service.ReflectionService - Author: Giga
+20:02:22.442 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+20:02:22.446 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+20:02:22.446 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+20:02:22.446 [main] INFO  com.solvd.metro.Main - DriverId: 1
+20:02:22.446 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+20:02:22.455 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:02:22.455 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+20:02:22.455 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+20:02:22.455 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+20:02:22.455 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:02:22.456 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+20:02:22.456 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+20:02:22.456 [main] INFO  com.solvd.metro.service.Booking - Price: 
+20:02:22.457 [main] INFO  com.solvd.metro.service.MetroSystemSession - Session opened: com.solvd.metro.Main Session
+20:02:22.478 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+20:02:22.478 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+20:02:22.482 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+20:02:22.483 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:02:22.487 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+20:02:22.488 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+20:02:22.488 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+20:02:22.489 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+20:02:22.494 [main] INFO  com.solvd.metro.service.MetroService - Passenger: Giga Seat: A1
+20:02:22.495 [main] INFO  com.solvd.metro.service.MetroService - Passenger: John Seat: B2
+20:02:22.503 [main] INFO  com.solvd.metro.service.ReflectionService - 
+ Reflection Info: Train
+20:02:22.506 [main] INFO  com.solvd.metro.service.ReflectionService - Description Represents a metro train
+20:02:22.506 [main] INFO  com.solvd.metro.service.ReflectionService - Author: Giga
+20:02:45.305 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+20:02:45.309 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+20:02:45.310 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+20:02:45.310 [main] INFO  com.solvd.metro.Main - DriverId: 1
+20:02:45.310 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+20:02:45.319 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:02:45.319 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+20:02:45.319 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+20:02:45.319 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+20:02:45.319 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:02:45.320 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+20:02:45.320 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+20:02:45.320 [main] INFO  com.solvd.metro.service.Booking - Price: 
+20:02:45.320 [main] INFO  com.solvd.metro.service.MetroSystemSession - Session opened: com.solvd.metro.Main Session
+20:02:45.340 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+20:02:45.341 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+20:02:45.344 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+20:02:45.344 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:02:45.349 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+20:02:45.349 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+20:02:45.350 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+20:02:45.353 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+20:02:45.357 [main] INFO  com.solvd.metro.service.MetroService - Passenger: John Seat: B2
+20:02:45.363 [main] INFO  com.solvd.metro.service.ReflectionService - 
+ Reflection Info: Train
+20:02:45.365 [main] INFO  com.solvd.metro.service.ReflectionService - Description Represents a metro train
+20:02:45.365 [main] INFO  com.solvd.metro.service.ReflectionService - Author: Giga
+20:04:48.190 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+20:04:48.196 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+20:04:48.197 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+20:04:48.197 [main] INFO  com.solvd.metro.Main - DriverId: 1
+20:04:48.197 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+20:04:48.211 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:04:48.212 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+20:04:48.212 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+20:04:48.212 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+20:04:48.213 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:04:48.213 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+20:04:48.213 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+20:04:48.213 [main] INFO  com.solvd.metro.service.Booking - Price: 
+20:04:48.215 [main] INFO  com.solvd.metro.service.MetroSystemSession - Session opened: com.solvd.metro.Main Session
+20:04:48.247 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Train
+20:04:48.248 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Bus
+20:04:48.251 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+20:04:48.251 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+20:04:48.255 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+20:04:48.256 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+20:04:48.261 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+20:04:48.261 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+20:04:48.262 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+20:04:48.266 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+20:04:48.271 [main] INFO  com.solvd.metro.service.MetroService - Passenger: John Seat: B2
+20:04:48.280 [main] INFO  com.solvd.metro.service.ReflectionService - 
+ Reflection Info: Train
+20:04:48.282 [main] INFO  com.solvd.metro.service.ReflectionService - Description Represents a metro train
+20:04:48.282 [main] INFO  com.solvd.metro.service.ReflectionService - Author: Giga
+21:58:51.138 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+21:58:51.138 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+21:58:51.138 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+21:58:51.138 [main] INFO  com.solvd.metro.Main - DriverId: 1
+21:58:51.138 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+21:58:51.138 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+21:58:51.138 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+21:58:51.138 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+21:58:51.138 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+21:58:51.138 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+21:58:51.138 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+21:58:51.138 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+21:58:51.138 [main] INFO  com.solvd.metro.service.Booking - Price: 
+21:58:51.138 [main] INFO  com.solvd.metro.service.MetroSystemSession - Session opened: com.solvd.metro.Main Session
+21:58:51.153 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Train
+21:58:51.153 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Bus
+21:58:51.169 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+21:58:51.169 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+21:58:51.169 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+21:58:51.169 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+21:58:51.169 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+21:58:51.169 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+21:58:51.169 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+21:58:51.169 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+21:58:51.185 [main] INFO  com.solvd.metro.service.MetroService - Passenger: John Seat: B2
+21:58:51.185 [main] INFO  com.solvd.metro.service.ReflectionService - 
+ Reflection Info: Train
+21:58:51.185 [main] INFO  com.solvd.metro.service.ReflectionService - Description Represents a metro train
+21:58:51.185 [main] INFO  com.solvd.metro.service.ReflectionService - Author: Giga
+21:58:51.185 [main] INFO  com.solvd.metro.service.ReflectionService - Field: trainNumber Type:int Modifier:private
+21:58:51.185 [main] INFO  com.solvd.metro.service.ReflectionService - Field: capacity Type:int Modifier:private
+21:58:51.185 [main] INFO  com.solvd.metro.service.ReflectionService - Field: driver Type:Driver Modifier:private
+21:58:51.185 [main] INFO  com.solvd.metro.service.ReflectionService - Field: speed Type:Speed Modifier:private
+21:58:51.185 [main] INFO  com.solvd.metro.service.ReflectionService - Field: status Type:TrainStatus Modifier:private
+21:59:42.044 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+21:59:42.049 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+21:59:42.049 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+21:59:42.050 [main] INFO  com.solvd.metro.Main - DriverId: 1
+21:59:42.050 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+21:59:42.057 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+21:59:42.057 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+21:59:42.057 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+21:59:42.058 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+21:59:42.058 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+21:59:42.058 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+21:59:42.058 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+21:59:42.058 [main] INFO  com.solvd.metro.service.Booking - Price: 
+21:59:42.059 [main] INFO  com.solvd.metro.service.MetroSystemSession - Session opened: com.solvd.metro.Main Session
+21:59:42.072 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Train
+21:59:42.072 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Bus
+21:59:42.075 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+21:59:42.075 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+21:59:42.078 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+21:59:42.078 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+21:59:42.082 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+21:59:42.083 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+21:59:42.083 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+21:59:42.086 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+21:59:42.089 [main] INFO  com.solvd.metro.service.MetroService - Passenger: John Seat: B2
+21:59:42.096 [main] INFO  com.solvd.metro.service.ReflectionService - 
+ Reflection Info: Train
+21:59:42.097 [main] INFO  com.solvd.metro.service.ReflectionService - Description Represents a metro train
+21:59:42.098 [main] INFO  com.solvd.metro.service.ReflectionService - Author: Giga
+21:59:42.098 [main] INFO  com.solvd.metro.service.ReflectionService - Field: trainNumber Type:int Modifier:private
+21:59:42.098 [main] INFO  com.solvd.metro.service.ReflectionService - Field: capacity Type:int Modifier:private
+21:59:42.098 [main] INFO  com.solvd.metro.service.ReflectionService - Field: driver Type:Driver Modifier:private
+21:59:42.098 [main] INFO  com.solvd.metro.service.ReflectionService - Field: speed Type:Speed Modifier:private
+21:59:42.099 [main] INFO  com.solvd.metro.service.ReflectionService - Field: status Type:TrainStatus Modifier:private
+22:11:44.071 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+22:11:44.074 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+22:11:44.075 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+22:11:44.075 [main] INFO  com.solvd.metro.Main - DriverId: 1
+22:11:44.075 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+22:11:44.076 [main] INFO  com.solvd.metro.Main - 101 status: Train is running normally
+22:11:44.076 [main] INFO  com.solvd.metro.Main - 102 status: Train is under maintenance
+22:11:44.076 [main] INFO  com.solvd.metro.Main - Is train1 available? true
+22:11:44.077 [main] INFO  com.solvd.metro.Main - Ticket type: Single Journey
+22:11:44.077 [main] INFO  com.solvd.metro.Main - Is unlimited? true
+22:11:44.079 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+22:11:44.079 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+22:11:44.080 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+22:11:44.080 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+22:11:44.080 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+22:11:44.080 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+22:11:44.080 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+22:11:44.080 [main] INFO  com.solvd.metro.service.Booking - Price: 
+22:11:44.080 [main] INFO  com.solvd.metro.Main - Booking attempt finished
+22:11:44.081 [main] INFO  com.solvd.metro.service.MetroSystemSession - Session opened: Main Session
+22:11:44.081 [main] INFO  com.solvd.metro.Main - Session block finished
+22:11:44.083 [main] INFO  com.solvd.metro.Main - Station type: Terminal Station - transfer available
+22:11:44.085 [main] INFO  com.solvd.metro.Main - Line color: Red (#FF0000)
+22:11:44.086 [main] INFO  com.solvd.metro.Main - Payment: Card payment (digital)
+22:11:44.087 [main] INFO  com.solvd.metro.Main - --- Metro System ---
+22:11:44.092 [main] INFO  com.solvd.metro.Main - Train 1: Train{trainNumber=101, capacity=50, driver=null, speed=com.solvd.metro.model.Speed@51e69659}
+22:11:44.092 [main] INFO  com.solvd.metro.Main - Train 2: Train{trainNumber=102, capacity=80, driver=null, speed=null}
+22:11:44.092 [main] INFO  com.solvd.metro.Main - Passenger 1: Passenger{seatNumber='A1'}
+22:11:44.092 [main] INFO  com.solvd.metro.Main - Passenger 2: Passenger{seatNumber='B2'}
+22:11:44.093 [main] INFO  com.solvd.metro.Main - Station 1: Station{location=Central Station, city=Tbilisi}
+22:11:44.093 [main] INFO  com.solvd.metro.Main - Station 2: Station{location=North Station, city=Tbilisi}
+22:11:44.093 [main] INFO  com.solvd.metro.Main - Ticket 1 price: 2.50
+22:11:44.093 [main] INFO  com.solvd.metro.Main - Ticket 2 price: 3.50
+22:11:44.093 [main] INFO  com.solvd.metro.Main - --- Schedule for Red Line ---
+22:11:44.093 [main] INFO  com.solvd.metro.Main - Train: 101 | Arrival: 2026-04-14T22:11:44.084627700 | Departure: 2026-04-14T22:41:44.084627700
+22:11:44.093 [main] INFO  com.solvd.metro.Main - Train: 102 | Arrival: 2026-04-14T23:11:44.084627700 | Departure: 2026-04-14T23:41:44.084627700
+22:11:44.094 [main] INFO  com.solvd.metro.Main - --- Polymorphism ---
+22:11:44.094 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Train
+22:11:44.094 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Bus
+22:11:44.094 [main] INFO  com.solvd.metro.Main - --- Equals & HashCode ---
+22:11:44.094 [main] INFO  com.solvd.metro.Main - train1 equals train3: false
+22:11:44.094 [main] INFO  com.solvd.metro.Main - train1 hashCode: 1378046727
+22:11:44.094 [main] INFO  com.solvd.metro.Main - train3 hashCode: 3932412
+22:11:44.094 [main] INFO  com.solvd.metro.Main - toString: Train{trainNumber=101, capacity=50, driver=null, speed=com.solvd.metro.model.Speed@51e69659}
+22:11:44.094 [main] INFO  com.solvd.metro.Main - toString: Passenger{seatNumber='A1'}
+22:11:44.095 [main] INFO  com.solvd.metro.Main - toString: Station{location=Central Station, city=Tbilisi}
+22:11:44.096 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+22:11:44.097 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+22:11:44.099 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+22:11:44.100 [main] INFO  com.solvd.metro.Main - ID: 101
+22:11:44.100 [main] INFO  com.solvd.metro.Main - Type: Train
+22:11:44.100 [main] INFO  com.solvd.metro.Main - Is available: false
+22:11:44.100 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+22:11:44.100 [main] INFO  com.solvd.metro.Main - Is available after booking: false
+22:11:44.100 [main] INFO  com.solvd.metro.Main - Metro name: Tbilisi Metro
+22:11:44.100 [main] INFO  com.solvd.metro.Main - Max capacity: 500
+22:11:44.101 [main] INFO  com.solvd.metro.Main - Train: 101
+22:11:44.102 [main] INFO  com.solvd.metro.Main - Arrives at: 2026-04-14T22:11:44.084627700
+22:11:44.102 [main] INFO  com.solvd.metro.Main - Departs at: 2026-04-14T22:41:44.084627700
+22:11:44.102 [main] INFO  com.solvd.metro.Main - Schedule search finished
+22:11:44.102 [main] INFO  com.solvd.metro.Main - Passenger: Giga | Ticket price: 2.50
+22:11:44.103 [main] INFO  com.solvd.metro.Main - Passenger: John | Ticket price: 3.50
+22:11:44.103 [main] INFO  com.solvd.metro.Main - Train status: Active -> 101
+22:11:44.103 [main] INFO  com.solvd.metro.Main - Train status: Under Maintenance -> 102
+22:11:44.104 [main] INFO  com.solvd.metro.Main - --- Runnable Tasks ---
+22:11:44.104 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+22:11:44.105 [main] INFO  com.solvd.metro.Main - Checking all train statuses...
+22:11:44.105 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+22:11:44.105 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+22:11:44.108 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+22:11:44.108 [main] INFO  com.solvd.metro.Main - --- Trains with capacity >= 60 ---
+22:11:44.108 [main] INFO  com.solvd.metro.Main - 102 capacity: 80
+22:11:44.108 [main] INFO  com.solvd.metro.Main - --- Train Summaries ---
+22:11:44.111 [main] INFO  com.solvd.metro.Main - Train 101 | Capacity: 50 | Status: ACTIVE
+22:11:44.111 [main] INFO  com.solvd.metro.Main - Train 102 | Capacity: 80 | Status: MAINTENANCE
+22:11:44.111 [main] INFO  com.solvd.metro.Main - --- All Passengers ---
+22:11:44.112 [main] INFO  com.solvd.metro.service.MetroService - Passenger: John Seat: B2
+22:11:44.112 [main] INFO  com.solvd.metro.Main - --- Default Ticket Price ---
+22:11:44.112 [main] INFO  com.solvd.metro.Main - Default price: 1.5
+22:11:44.112 [main] INFO  com.solvd.metro.Main - --- Total Price with Service Fee ---
+22:11:44.113 [main] INFO  com.solvd.metro.Main - Total: 2.75
+22:11:44.113 [main] INFO  com.solvd.metro.Main - --- Filter Trains (caller decides) ---
+22:11:44.114 [main] INFO  com.solvd.metro.Main - Active train: 101
+22:11:44.114 [main] INFO  com.solvd.metro.Main - High capacity train: 102
+22:11:44.114 [main] INFO  com.solvd.metro.Main - Specific train: 101
+22:11:44.114 [main] INFO  com.solvd.metro.Main - --- Validate Tickets (caller decides) ---
+22:11:44.115 [main] INFO  com.solvd.metro.Main - Ticket1 valid? false
+22:11:44.115 [main] INFO  com.solvd.metro.Main - Ticket2 valid? true
+22:11:44.115 [main] INFO  com.solvd.metro.Main - --- Passenger Actions (caller decides) ---
+22:11:44.116 [main] INFO  com.solvd.metro.Main - Boarding: John
+22:11:44.116 [main] INFO  com.solvd.metro.Main - Checking ticket for: John
+22:11:44.116 [main] INFO  com.solvd.metro.Main - --- System Info ---
+22:11:44.118 [main] INFO  com.solvd.metro.service.ReflectionService - Reflection Info: Train
+22:11:44.119 [main] INFO  com.solvd.metro.service.ReflectionService - Description: Represents a metro train
+22:11:44.119 [main] INFO  com.solvd.metro.service.ReflectionService - Author: Giga
+22:11:44.119 [main] INFO  com.solvd.metro.service.ReflectionService - -- Fields --
+22:11:44.120 [main] INFO  com.solvd.metro.service.ReflectionService - Field: trainNumber | Type: int | Modifier: private
+22:11:44.120 [main] INFO  com.solvd.metro.service.ReflectionService - Annotation: Unique train number
+22:11:44.120 [main] INFO  com.solvd.metro.service.ReflectionService - Field: capacity | Type: int | Modifier: private
+22:11:44.120 [main] INFO  com.solvd.metro.service.ReflectionService - Field: driver | Type: Driver | Modifier: private
+22:11:44.120 [main] INFO  com.solvd.metro.service.ReflectionService - Field: speed | Type: Speed | Modifier: private
+22:11:44.120 [main] INFO  com.solvd.metro.service.ReflectionService - Field: status | Type: TrainStatus | Modifier: private
+22:11:44.120 [main] INFO  com.solvd.metro.service.ReflectionService - -- Constructors --
+22:11:44.120 [main] INFO  com.solvd.metro.service.ReflectionService - Constructor: com.solvd.metro.model.Train | Parameters: 0
+22:11:44.120 [main] INFO  com.solvd.metro.service.ReflectionService - -- Methods --
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Method: equals | Return type: boolean | Modifier: public
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Method: toString | Return type: String | Modifier: public
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Method: hashCode | Return type: int | Modifier: public
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getId | Return type: int | Modifier: public
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getType | Return type: String | Modifier: public
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Annotation: Returns train type
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Method: move | Return type: void | Modifier: public
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getCapacity | Return type: int | Modifier: public
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getSpeedObject | Return type: Speed | Modifier: public
+22:11:44.121 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setTrainNumber | Return type: void | Modifier: public
+22:11:44.122 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getTrainNumber | Return type: int | Modifier: public
+22:11:44.122 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setCapacity | Return type: void | Modifier: public
+22:11:44.122 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getStatus | Return type: TrainStatus | Modifier: public
+22:11:44.122 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setStatus | Return type: void | Modifier: public
+22:11:44.122 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setSpeed | Return type: void | Modifier: public
+22:11:44.122 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getSpeed | Return type: int | Modifier: public
+22:11:44.122 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getDriver | Return type: Driver | Modifier: public
+22:11:44.122 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setDriver | Return type: void | Modifier: public
+22:11:44.125 [main] INFO  com.solvd.metro.service.ReflectionService - Train number via reflection: 999
+22:11:44.125 [main] INFO  com.solvd.metro.service.ReflectionService - Train type via reflection: Train
+22:11:44.125 [main] INFO  com.solvd.metro.Main - Train created via reflection: 999
+22:11:44.126 [main] INFO  com.solvd.metro.Main - Train type: Train
+22:11:44.126 [main] INFO  com.solvd.metro.Main - Train number: 999

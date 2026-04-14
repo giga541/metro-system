@@ -1,8 +1,13 @@
 package com.solvd.metro.model;
 
+import com.solvd.metro.Main;
 import com.solvd.metro.interfaces.Identifiable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Driver extends Person implements Identifiable {
+
+    private static final Logger logger = LogManager.getLogger(Driver.class);
 
     @Override
     public int getId() {
@@ -20,7 +25,7 @@ public class Driver extends Person implements Identifiable {
 
     static {
         totalDrivers = 0;
-        System.out.println("Driver class initialized");
+        logger.info("Driver class initialized");
     }
 
     public Driver() {

@@ -2,6 +2,8 @@ package com.solvd.metro.service;
 
 import com.solvd.metro.annotations.MetroInfo;
 import com.solvd.metro.model.Train;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -11,40 +13,37 @@ import java.util.Optional;
 
 public class ReflectionService {
 
+    private static final Logger logger = LogManager.getLogger(ReflectionService.class);
+
     public void extractInfo(Class<?> clazz) {
-        System.out.println("\n--- Reflection Info: " + clazz.getSimpleName() + " ---");
+        logger.info("Reflection Info: {}", clazz.getSimpleName());
 
         if (clazz.isAnnotationPresent(MetroInfo.class)) {
             MetroInfo annotation = clazz.getAnnotation(MetroInfo.class);
-            System.out.println("Description: " + annotation.description());
-            System.out.println("Author: " + annotation.author());
+            logger.info("Description: {}", annotation.description());
+            logger.info("Author: {}", annotation.author());
         }
 
-        System.out.println("\n-- Fields --");
+        logger.info("-- Fields --");
         for (Field field : clazz.getDeclaredFields()) {
-            System.out.println("Field: " + field.getName()
-                    + " | Type: " + field.getType().getSimpleName()
-                    + " | Modifier: " + Modifier.toString(field.getModifiers()));
+            logger.info("Field: {} | Type: {} | Modifier: {}", field.getName(), field.getType().getSimpleName(), Modifier.toString(field.getModifiers()));
 
             if (field.isAnnotationPresent(MetroInfo.class)) {
-                System.out.println("  Annotation: " + field.getAnnotation(MetroInfo.class).description());
+                logger.info("Annotation: {}", field.getAnnotation(MetroInfo.class).description());
             }
         }
 
-        System.out.println("\n-- Constructors --");
+        logger.info("-- Constructors --");
         for (Constructor<?> constructor : clazz.getDeclaredConstructors()) {
-            System.out.println("Constructor: " + constructor.getName()
-                    + " | Parameters: " + constructor.getParameterCount());
+            logger.info("Constructor: {} | Parameters: {}", constructor.getName(), constructor.getParameterCount());
         }
 
-        System.out.println("\n-- Methods --");
+        logger.info("-- Methods --");
         for (Method method : clazz.getDeclaredMethods()) {
-            System.out.println("Method: " + method.getName()
-                    + " | Return type: " + method.getReturnType().getSimpleName()
-                    + " | Modifier: " + Modifier.toString(method.getModifiers()));
+            logger.info("Method: {} | Return type: {} | Modifier: {}", method.getName(), method.getReturnType().getSimpleName(), Modifier.toString(method.getModifiers()));
 
             if (method.isAnnotationPresent(MetroInfo.class)) {
-                System.out.println("  Annotation: " + method.getAnnotation(MetroInfo.class).description());
+                logger.info("Annotation: {}", method.getAnnotation(MetroInfo.class).description());
             }
         }
     }
@@ -58,13 +57,13 @@ public class ReflectionService {
             setTrainNumber.invoke(train, 999);
 
             Method getTrainNumber = trainClass.getMethod("getTrainNumber");
-            System.out.println("Train number via reflection: " + getTrainNumber.invoke(train));
+            logger.info("Train number via reflection: {}", getTrainNumber.invoke(train));
 
             Method getType = trainClass.getMethod("getType");
-            System.out.println("Train type via reflection: " + getType.invoke(train));
+            logger.info("Train type via reflection: {}", getType.invoke(train));
 
         } catch (Exception e) {
-            System.out.println("Reflection error: " + e.getMessage());
+            logger.error("Reflection error: {}", e.getMessage());
         }
     }
 
@@ -78,7 +77,7 @@ public class ReflectionService {
 
             return Optional.of((Train) train);
         } catch (Exception e) {
-            System.out.println("Could not create train: " + e.getMessage());
+            logger.error("Could not create train: {}", e.getMessage());
             return Optional.empty();
         }
     }

@@ -12,6 +12,8 @@ import com.solvd.metro.service.Booking;
 import com.solvd.metro.service.MetroService;
 import com.solvd.metro.service.MetroSystemSession;
 import com.solvd.metro.service.ReflectionService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -19,20 +21,23 @@ import java.util.List;
 import java.util.Optional;
 
 public class Main {
+
+    private static final Logger logger = LogManager.getLogger(Main.class);
+
     public static void main(String[] args) {
 
         // Speed
         Speed speed = new Speed("model3", 90);
-        System.out.println(speed.getTrainModel() + " " + speed.getTrainSpeed());
+        logger.info("Train model: {} speed: {}", speed.getTrainModel(), speed.getTrainSpeed());
 
         // Drivers
         Driver driver = new Driver();
         driver.setName("Mike");
         Driver driver2 = new Driver();
         driver2.setName("John");
-        System.out.println(driver.getName());
-        System.out.println(driver.getDriverId());
-        System.out.println("Total drivers: " + Driver.getTotalDrivers());
+        logger.info("Driver name: {}", driver.getName());
+        logger.info("DriverId: {}", driver.getDriverId());
+        logger.info("Total drivers: {}", Driver.getTotalDrivers());
 
         // Passengers
         Passenger passenger1 = new Passenger();
@@ -52,9 +57,9 @@ public class Main {
         train1.setSpeed(speed);
         train1.setStatus(TrainStatus.ACTIVE);
         train2.setStatus(TrainStatus.MAINTENANCE);
-        System.out.println(train1.getTrainNumber() + " status: " + train1.getStatus().getDescription());
-        System.out.println(train2.getTrainNumber() + " status: " + train2.getStatus().getDescription());
-        System.out.println("Is train1 available? " + train1.getStatus().isAvailable());
+        logger.info("{} status: {}", train1.getTrainNumber(), train1.getStatus().getDescription());
+        logger.info("{} status: {}", train2.getTrainNumber(), train2.getStatus().getDescription());
+        logger.info("Is train1 available? {}", train1.getStatus().isAvailable());
 
         // Tickets
         Ticket ticket1 = new Ticket();
@@ -65,26 +70,26 @@ public class Main {
         ticket2.setPurchaseTime(LocalDateTime.now());
         ticket1.setTicketType(TicketType.SINGLE);
         ticket2.setTicketType(TicketType.MONTHLY);
-        System.out.println("Ticket type: " + ticket1.getTicketType().getDescription());
-        System.out.println("Is unlimited? " + ticket2.getTicketType().isUnlimited());
+        logger.info("Ticket type: {}", ticket1.getTicketType().getDescription());
+        logger.info("Is unlimited? {}", ticket2.getTicketType().isUnlimited());
 
-        // Booking - checked com.solvd.metro.exception with finally
+        // Booking
         Booking booking = new Booking();
         try {
             booking.bookTicket(passenger1, train1, ticket1);
         } catch (TicketBookingException e) {
-            System.out.println("Booking failed: " + e.getMessage());
+            logger.error("Booking failed: {}", e.getMessage());
         } finally {
-            System.out.println("Booking attempt finished");
+            logger.info("Booking attempt finished");
         }
 
         // AutoCloseable
-        try (MetroSystemSession session = new MetroSystemSession("com.solvd.metro.Main Session")) {
+        try (MetroSystemSession session = new MetroSystemSession("Main Session")) {
             session.doWork();
         } catch (Exception e) {
-            System.out.println("Session error: " + e.getMessage());
+            logger.error("Session error: {}", e.getMessage());
         } finally {
-            System.out.println("Session block finished");
+            logger.info("Session block finished");
         }
 
         // Platforms and Stations
@@ -103,7 +108,7 @@ public class Main {
         station2.addPlatform(platform2);
         station1.setStationType(StationType.TERMINAL);
         station2.setStationType(StationType.JUNCTION);
-        System.out.println("Station type: " + station1.getStationType().getInfo());
+        logger.info("Station type: {}", station1.getStationType().getInfo());
 
         // Schedule
         Schedule schedule = new Schedule();
@@ -119,12 +124,12 @@ public class Main {
         Line line2 = new Line();
         line2.setLineName("Blue Line");
         line1.setColor(LineColor.RED);
-        System.out.println("Line color: " + line1.getColor().getDisplayName());
+        logger.info("Line color: {}", line1.getColor().getDisplayName());
 
-        //payment
+        // Payment
         Payment payment = new Payment();
         payment.setPaymentMethod(PaymentMethod.CARD);
-        System.out.println("Payment: " + payment.getPaymentMethod().getPaymentInfo());
+        logger.info("Payment: {}", payment.getPaymentMethod().getPaymentInfo());
 
         // Metro System
         MetroSystem metro = new MetroSystem();
@@ -141,40 +146,37 @@ public class Main {
         metro.addVehicle(train1);
         metro.addVehicle(new Bus());
 
-        System.out.println("\n--- Metro System ---");
-        System.out.println("Train 1: " + metro.getTrains().get(0));
-        System.out.println("Train 2: " + metro.getTrains().get(1));
-        System.out.println("Passenger 1: " + metro.getPassengers().get(0));
-        System.out.println("Passenger 2: " + metro.getPassengers().get(1));
-        System.out.println("Station 1: " + line1.getStations().get(0));
-        System.out.println("Station 2: " + line1.getStations().get(1));
-        System.out.println("Ticket 1 price: " + metro.getTickets().get(0).getPrice());
-        System.out.println("Ticket 2 price: " + metro.getTickets().get(1).getPrice());
+        logger.info("--- Metro System ---");
+        logger.info("Train 1: {}", metro.getTrains().get(0));
+        logger.info("Train 2: {}", metro.getTrains().get(1));
+        logger.info("Passenger 1: {}", metro.getPassengers().get(0));
+        logger.info("Passenger 2: {}", metro.getPassengers().get(1));
+        logger.info("Station 1: {}", line1.getStations().get(0));
+        logger.info("Station 2: {}", line1.getStations().get(1));
+        logger.info("Ticket 1 price: {}", metro.getTickets().get(0).getPrice());
+        logger.info("Ticket 2 price: {}", metro.getTickets().get(1).getPrice());
 
-        System.out.println("\n--- Schedule for " + line1.getLineName() + " ---");
+        logger.info("--- Schedule for {} ---", line1.getLineName());
         for (TrainSchedule ts : schedule.getTrainSchedules()) {
-            System.out.println("Train: " + ts.train().getTrainNumber()
-                    + " | Arrival: " + ts.arrivalTime()
-                    + " | Departure: " + ts.departureTime());
+            logger.info("Train: {} | Arrival: {} | Departure: {}", ts.train().getTrainNumber(), ts.arrivalTime(), ts.departureTime());
         }
 
-        System.out.println("\n--- Polymorphism ---");
+        logger.info("--- Polymorphism ---");
         booking.printVehicleType(train1);
         booking.printVehicleType(new Bus());
 
-        System.out.println("\n--- Equals & HashCode ---");
+        logger.info("--- Equals & HashCode ---");
         Train train3 = new Train();
         train3.setTrainNumber(101);
-        System.out.println("train1 equals train3: " + train1.equals(train3));
-        System.out.println("train1 hashCode: " + train1.hashCode());
-        System.out.println("train3 hashCode: " + train3.hashCode());
+        logger.info("train1 equals train3: {}", train1.equals(train3));
+        logger.info("train1 hashCode: {}", train1.hashCode());
+        logger.info("train3 hashCode: {}", train3.hashCode());
 
-        // toString
-        System.out.println(train1);
-        System.out.println(passenger1);
-        System.out.println(station1);
+        logger.info("toString: {}", train1);
+        logger.info("toString: {}", passenger1);
+        logger.info("toString: {}", station1);
 
-        // com.solvd.metro.interfaces - polymorphism via method parameter
+        // interfaces - polymorphism via method parameter
         Booking book = new Booking();
         book.startMoving(train1);
         book.processPayment(ticket1);
@@ -182,126 +184,104 @@ public class Main {
 
         // Identifiable
         Identifiable identifiable = train1;
-        System.out.println("ID: " + identifiable.getId());
-        System.out.println("Type: " + identifiable.getType());
+        logger.info("ID: {}", identifiable.getId());
+        logger.info("Type: {}", identifiable.getType());
 
         // Bookable
         Bookable bookable = ticket1;
-        System.out.println("Is available: " + bookable.isAvailable());
+        logger.info("Is available: {}", bookable.isAvailable());
         bookable.book();
-        System.out.println("Is available after booking: " + bookable.isAvailable());
+        logger.info("Is available after booking: {}", bookable.isAvailable());
 
         // final class constant
-        System.out.println("Metro name: " + Constants.METRO_NAME);
-        System.out.println("Max capacity: " + Constants.MAX_CAPACITY);
+        logger.info("Metro name: {}", Constants.METRO_NAME);
+        logger.info("Max capacity: {}", Constants.MAX_CAPACITY);
 
         // final method
         passenger1.printInfo();
 
-        // find a specific train's schedule - checked com.solvd.metro.exception with finally
+        // find a specific train's schedule
         try {
             TrainSchedule ts = schedule.findByTrain(101);
-            System.out.println("Train: " + ts.train().getTrainNumber());
-            System.out.println("Arrives at: " + ts.arrivalTime());
-            System.out.println("Departs at: " + ts.departureTime());
+            logger.info("Train: {}", ts.train().getTrainNumber());
+            logger.info("Arrives at: {}", ts.arrivalTime());
+            logger.info("Departs at: {}", ts.departureTime());
         } catch (TrainNotFoundException e) {
-            System.out.println("Error: " + e.getMessage());
+            logger.error("Error: {}", e.getMessage());
         } finally {
-            System.out.println("Schedule search finished");
+            logger.info("Schedule search finished");
         }
 
         // Generics
         Pair<Passenger, Ticket> passengerTicket1 = new Pair<>(passenger1, ticket1);
         Pair<Passenger, Ticket> passengerTicket2 = new Pair<>(passenger2, ticket2);
-        System.out.println("Passenger: " + passengerTicket1.getFirst().getName()
-                + " | Ticket price: " + passengerTicket1.getSecond().getPrice());
-        System.out.println("Passenger: " + passengerTicket2.getFirst().getName()
-                + " | Ticket price: " + passengerTicket2.getSecond().getPrice());
+        logger.info("Passenger: {} | Ticket price: {}", passengerTicket1.getFirst().getName(), passengerTicket1.getSecond().getPrice());
+        logger.info("Passenger: {} | Ticket price: {}", passengerTicket2.getFirst().getName(), passengerTicket2.getSecond().getPrice());
 
         Container<Train> activeTrain = new Container<>("Active", train1);
         Container<Train> maintenanceTrain = new Container<>("Under Maintenance", train2);
-        System.out.println("Train status: " + activeTrain.getLabel()
-                + " -> " + activeTrain.getItem().getTrainNumber());
-        System.out.println("Train status: " + maintenanceTrain.getLabel()
-                + " -> " + maintenanceTrain.getItem().getTrainNumber());
+        logger.info("Train status: {} -> {}", activeTrain.getLabel(), activeTrain.getItem().getTrainNumber());
+        logger.info("Train status: {} -> {}", maintenanceTrain.getLabel(), maintenanceTrain.getItem().getTrainNumber());
 
         // MetroService
         MetroService metroService = new MetroService();
 
         // Runnable
-        System.out.println("\n--- Runnable Tasks ---");
-        metroService.runTask(() -> System.out.println("Checking all train statuses..."));
+        logger.info("--- Runnable Tasks ---");
+        metroService.runTask(() -> logger.info("Checking all train statuses..."));
         metroService.runTask(() -> metro.printSystemInfo());
 
         // Predicate
-        System.out.println("\n--- Trains with capacity >= 60 ---");
+        logger.info("--- Trains with capacity >= 60 ---");
         List<Train> bigTrains = metroService.getTrainsWithMinCapacity(metro.getTrains(), 60);
         for (Train t : bigTrains) {
-            System.out.println(t.getTrainNumber() + " capacity: " + t.getCapacity());
+            logger.info("{} capacity: {}", t.getTrainNumber(), t.getCapacity());
         }
 
         // Function
-        System.out.println("\n--- Train Summaries ---");
-        System.out.println(metroService.getTrainSummary(train1));
-        System.out.println(metroService.getTrainSummary(train2));
+        logger.info("--- Train Summaries ---");
+        logger.info(metroService.getTrainSummary(train1));
+        logger.info(metroService.getTrainSummary(train2));
 
         // Consumer
-        System.out.println("\n--- All Passengers ---");
+        logger.info("--- All Passengers ---");
         metroService.printAllPassengers(metro.getPassengers());
 
         // Supplier
-        System.out.println("\n--- Default Ticket Price ---");
-        System.out.println("Default price: " + metroService.getDefaultTicketPrice());
+        logger.info("--- Default Ticket Price ---");
+        logger.info("Default price: {}", metroService.getDefaultTicketPrice());
 
         // BiFunction
-        System.out.println("\n--- Total Price with Service Fee ---");
-        System.out.println("Total: " + metroService.calculateTotalPrice(passenger1, ticket1));
+        logger.info("--- Total Price with Service Fee ---");
+        logger.info("Total: {}", metroService.calculateTotalPrice(passenger1, ticket1));
 
-
-        System.out.println("\n--- Filter Trains (caller decides) ---");
-        List<Train> activeTrains = metroService.filterTrains(
-                metro.getTrains(),
-                t -> t.getStatus() == TrainStatus.ACTIVE
-        );
-        List<Train> highCapacityTrains = metroService.filterTrains(
-                metro.getTrains(),
-                t -> t.getCapacity() >= 60
-        );
-        List<Train> specificTrain = metroService.filterTrains(
-                metro.getTrains(),
-                t -> t.getTrainNumber() == 101
-        );
+        // Filter Trains
+        logger.info("--- Filter Trains (caller decides) ---");
+        List<Train> activeTrains = metroService.filterTrains(metro.getTrains(), t -> t.getStatus() == TrainStatus.ACTIVE);
+        List<Train> highCapacityTrains = metroService.filterTrains(metro.getTrains(), t -> t.getCapacity() >= 60);
+        List<Train> specificTrain = metroService.filterTrains(metro.getTrains(), t -> t.getTrainNumber() == 101);
         for (Train t : activeTrains) {
-            System.out.println("Active train: " + t.getTrainNumber());
+            logger.info("Active train: {}", t.getTrainNumber());
         }
         for (Train t : highCapacityTrains) {
-            System.out.println("High capacity train: " + t.getTrainNumber());
+            logger.info("High capacity train: {}", t.getTrainNumber());
         }
         for (Train t : specificTrain) {
-            System.out.println("Specific train: " + t.getTrainNumber());
+            logger.info("Specific train: {}", t.getTrainNumber());
         }
 
-        System.out.println("\n--- Validate Tickets (caller decides) ---");
-        System.out.println("Ticket1 valid? " + metroService.validateTicket(
-                ticket1,
-                t -> t.getPrice() != null && t.getAmount().doubleValue() > 0 && t.isAvailable()
-        ));
-        System.out.println("Ticket2 valid? " + metroService.validateTicket(
-                ticket2,
-                t -> t.getTicketType() == TicketType.MONTHLY
-        ));
+        // Validate Tickets
+        logger.info("--- Validate Tickets (caller decides) ---");
+        logger.info("Ticket1 valid? {}", metroService.validateTicket(ticket1, t -> t.getPrice() != null && t.getAmount().doubleValue() > 0 && t.isAvailable()));
+        logger.info("Ticket2 valid? {}", metroService.validateTicket(ticket2, t -> t.getTicketType() == TicketType.MONTHLY));
 
-        System.out.println("\n--- Passenger Actions (caller decides) ---");
-        metroService.performOnPassengers(
-                metro.getPassengers(),
-                p -> System.out.println("Boarding: " + p.getName())
-        );
-        metroService.performOnPassengers(
-                metro.getPassengers(),
-                p -> System.out.println("Checking ticket for: " + p.getName())
-        );
+        // Passenger Actions
+        logger.info("--- Passenger Actions (caller decides) ---");
+        metroService.performOnPassengers(metro.getPassengers(), p -> logger.info("Boarding: {}", p.getName()));
+        metroService.performOnPassengers(metro.getPassengers(), p -> logger.info("Checking ticket for: {}", p.getName()));
 
-        System.out.println("\n--- System Info ---");
+        // System Info
+        logger.info("--- System Info ---");
         metro.printSystemInfo();
         metro.printFirstElements();
 
@@ -312,19 +292,13 @@ public class Main {
 
         // Optional
         Optional<Train> optionalTrain = reflectionService.createTrainWithReflection();
-
-        // handle it
         if (optionalTrain.isPresent()) {
-            System.out.println("Train created via reflection: " + optionalTrain.get().getTrainNumber());
+            logger.info("Train created via reflection: {}", optionalTrain.get().getTrainNumber());
         } else {
-            System.out.println("Train could not be created");
+            logger.info("Train could not be created");
         }
-
-        //using ifPresent with lambda
-        optionalTrain.ifPresent(t -> System.out.println("Train type: " + t.getType()));
-
-        //using orElse
+        optionalTrain.ifPresent(t -> logger.info("Train type: {}", t.getType()));
         Train trainOrDefault = optionalTrain.orElse(new Train());
-        System.out.println("Train number: " + trainOrDefault.getTrainNumber());
+        logger.info("Train number: {}", trainOrDefault.getTrainNumber());
     }
 }

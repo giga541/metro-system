@@ -4,12 +4,16 @@ import com.solvd.metro.interfaces.PassengerAction;
 import com.solvd.metro.interfaces.TicketValidator;
 import com.solvd.metro.interfaces.TrainFilter;
 import com.solvd.metro.model.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 import java.util.function.*;
 import java.util.stream.Collectors;
 
 public class MetroService {
+
+    private static final Logger logger = LogManager.getLogger(MetroService.class);
 
     public boolean validateTicket(Ticket ticket, TicketValidator validator) {
         return validator.validate(ticket);
@@ -37,7 +41,7 @@ public class MetroService {
     // Consumer - print each passenger
     public void printAllPassengers(List<Passenger> passengers) {
         Consumer<Passenger> printPassenger = p ->
-                System.out.println("Passenger: " + p.getName() + " | Seat: " + p.getSeatNumber());
+                logger.info("Passenger: {} Seat: {}", p.getName(), p.getSeatNumber());
         passengers.forEach(printPassenger);
     }
 
@@ -62,8 +66,8 @@ public class MetroService {
     }
 
     public void runTask(Runnable task) {
-        System.out.println("Starting task...");
+        logger.info("Starting task...");
         task.run();
-        System.out.println("Task finished.");
+        logger.info("Task finished.");
     }
 }
