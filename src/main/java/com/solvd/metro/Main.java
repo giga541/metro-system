@@ -8,13 +8,11 @@ import com.solvd.metro.interfaces.Bookable;
 import com.solvd.metro.interfaces.Identifiable;
 import com.solvd.metro.model.*;
 import com.solvd.metro.records.TrainSchedule;
-import com.solvd.metro.service.Booking;
-import com.solvd.metro.service.MetroService;
-import com.solvd.metro.service.MetroSystemSession;
-import com.solvd.metro.service.ReflectionService;
+import com.solvd.metro.service.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -300,5 +298,16 @@ public class Main {
         optionalTrain.ifPresent(t -> logger.info("Train type: {}", t.getType()));
         Train trainOrDefault = optionalTrain.orElse(new Train());
         logger.info("Train number: {}", trainOrDefault.getTrainNumber());
+
+        // word count
+        WordCountService wordCountService = new WordCountService();
+        try {
+            wordCountService.countUniqueWords(
+                    "src/main/resources/homer.txt",
+                    "src/main/resources/result.txt"
+            );
+        } catch (IOException e) {
+            logger.error("Error counting words: {}", e.getMessage());
+        }
     }
 }
