@@ -309,15 +309,19 @@ public class Main {
 //        } catch (IOException e) {
 //            logger.error("Error counting words: {}", e.getMessage());
 //        }
+//
+//        // Thread 1 - using Runnable
+//        Thread thread1 = new Thread(new ThreadDemo.TrainStatusRunnable("Train 101"));
+//        thread1.start();
+//        thread1.join();
+//
+//        // Thread 2 - using Thread class
+//        ThreadDemo.PassengerBoardingThread thread2 = new ThreadDemo.PassengerBoardingThread("Giga");
+//        thread2.start();
+//        thread2.join();
 
-        // Thread 1 - using Runnable
-        Thread thread1 = new Thread(new ThreadDemo.TrainStatusRunnable("Train 101"));
-        thread1.start();
-        thread1.join();
-
-        // Thread 2 - using Thread class
-        ThreadDemo.PassengerBoardingThread thread2 = new ThreadDemo.PassengerBoardingThread("Giga");
-        thread2.start();
-        thread2.join();
+        // Connection Pool Demo
+        logger.info("--- Connection Pool Demo ---");
+        ConnectionPoolDemo.run();
     }
 }

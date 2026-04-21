@@ -1225,3 +1225,253 @@
 13:20:38.939 [Thread-0] INFO  com.solvd.metro.service.ThreadDemo - Checking status of train: Train 101 on thread: Thread-0
 13:21:00.691 [Thread-0] INFO  com.solvd.metro.service.ThreadDemo - Checking status of train: Train 101 on thread: Thread-0
 13:21:00.691 [Thread-1] INFO  com.solvd.metro.service.ThreadDemo - Passenger Giga boarding on thread: Thread-1
+15:02:41.400 [main] INFO  com.solvd.metro.Main - Train model: model3 speed: 90
+15:02:41.404 [main] INFO  com.solvd.metro.model.Driver - Driver class initialized
+15:02:41.405 [main] INFO  com.solvd.metro.Main - Driver name: Mike
+15:02:41.405 [main] INFO  com.solvd.metro.Main - DriverId: 1
+15:02:41.405 [main] INFO  com.solvd.metro.Main - Total drivers: 2
+15:02:41.406 [main] INFO  com.solvd.metro.Main - 101 status: Train is running normally
+15:02:41.406 [main] INFO  com.solvd.metro.Main - 102 status: Train is under maintenance
+15:02:41.406 [main] INFO  com.solvd.metro.Main - Is train1 available? true
+15:02:41.408 [main] INFO  com.solvd.metro.Main - Ticket type: Single Journey
+15:02:41.408 [main] INFO  com.solvd.metro.Main - Is unlimited? true
+15:02:41.409 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+15:02:41.410 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+15:02:41.410 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+15:02:41.410 [main] INFO  com.solvd.metro.service.Booking - Price: 2.50
+15:02:41.410 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+15:02:41.410 [main] INFO  com.solvd.metro.service.Booking - Ticket booked for Giga
+15:02:41.410 [main] INFO  com.solvd.metro.service.Booking - Train number: 101
+15:02:41.410 [main] INFO  com.solvd.metro.service.Booking - Price: 
+15:02:41.410 [main] INFO  com.solvd.metro.Main - Booking attempt finished
+15:02:41.411 [main] INFO  com.solvd.metro.service.MetroSystemSession - Session opened: Main Session
+15:02:41.411 [main] INFO  com.solvd.metro.Main - Session block finished
+15:02:41.413 [main] INFO  com.solvd.metro.Main - Station type: Terminal Station - transfer available
+15:02:41.414 [main] INFO  com.solvd.metro.Main - Line color: Red (#FF0000)
+15:02:41.416 [main] INFO  com.solvd.metro.Main - Payment: Card payment (digital)
+15:02:41.416 [main] INFO  com.solvd.metro.Main - --- Metro System ---
+15:02:41.422 [main] INFO  com.solvd.metro.Main - Train 1: Train{trainNumber=101, capacity=50, driver=null, speed=com.solvd.metro.model.Speed@51e69659}
+15:02:41.423 [main] INFO  com.solvd.metro.Main - Train 2: Train{trainNumber=102, capacity=80, driver=null, speed=null}
+15:02:41.423 [main] INFO  com.solvd.metro.Main - Passenger 1: Passenger{seatNumber='A1'}
+15:02:41.423 [main] INFO  com.solvd.metro.Main - Passenger 2: Passenger{seatNumber='B2'}
+15:02:41.423 [main] INFO  com.solvd.metro.Main - Station 1: Station{location=Central Station, city=Tbilisi}
+15:02:41.424 [main] INFO  com.solvd.metro.Main - Station 2: Station{location=North Station, city=Tbilisi}
+15:02:41.424 [main] INFO  com.solvd.metro.Main - Ticket 1 price: 2.50
+15:02:41.424 [main] INFO  com.solvd.metro.Main - Ticket 2 price: 3.50
+15:02:41.424 [main] INFO  com.solvd.metro.Main - --- Schedule for Red Line ---
+15:02:41.424 [main] INFO  com.solvd.metro.Main - Train: 101 | Arrival: 2026-04-21T15:02:41.413401200 | Departure: 2026-04-21T15:32:41.413401200
+15:02:41.424 [main] INFO  com.solvd.metro.Main - Train: 102 | Arrival: 2026-04-21T16:02:41.413401200 | Departure: 2026-04-21T16:32:41.413401200
+15:02:41.424 [main] INFO  com.solvd.metro.Main - --- Polymorphism ---
+15:02:41.425 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Train
+15:02:41.425 [main] INFO  com.solvd.metro.service.Booking - Vehicle type: Bus
+15:02:41.425 [main] INFO  com.solvd.metro.Main - --- Equals & HashCode ---
+15:02:41.425 [main] INFO  com.solvd.metro.Main - train1 equals train3: false
+15:02:41.425 [main] INFO  com.solvd.metro.Main - train1 hashCode: 1378046727
+15:02:41.425 [main] INFO  com.solvd.metro.Main - train3 hashCode: 3932412
+15:02:41.425 [main] INFO  com.solvd.metro.Main - toString: Train{trainNumber=101, capacity=50, driver=null, speed=com.solvd.metro.model.Speed@51e69659}
+15:02:41.425 [main] INFO  com.solvd.metro.Main - toString: Passenger{seatNumber='A1'}
+15:02:41.426 [main] INFO  com.solvd.metro.Main - toString: Station{location=Central Station, city=Tbilisi}
+15:02:41.427 [main] INFO  com.solvd.metro.service.Booking - Moving at speed: 90
+15:02:41.428 [main] INFO  com.solvd.metro.service.Booking - Amount to pay: 2.50
+15:02:41.431 [main] INFO  com.solvd.metro.service.Booking - Line: Red Line has 2 stations
+15:02:41.431 [main] INFO  com.solvd.metro.Main - ID: 101
+15:02:41.431 [main] INFO  com.solvd.metro.Main - Type: Train
+15:02:41.431 [main] INFO  com.solvd.metro.Main - Is available: false
+15:02:41.431 [main] INFO  com.solvd.metro.model.Ticket - Ticket booked for price: 2.50
+15:02:41.432 [main] INFO  com.solvd.metro.Main - Is available after booking: false
+15:02:41.432 [main] INFO  com.solvd.metro.Main - Metro name: Tbilisi Metro
+15:02:41.432 [main] INFO  com.solvd.metro.Main - Max capacity: 500
+15:02:41.433 [main] INFO  com.solvd.metro.Main - Train: 101
+15:02:41.433 [main] INFO  com.solvd.metro.Main - Arrives at: 2026-04-21T15:02:41.413401200
+15:02:41.434 [main] INFO  com.solvd.metro.Main - Departs at: 2026-04-21T15:32:41.413401200
+15:02:41.434 [main] INFO  com.solvd.metro.Main - Schedule search finished
+15:02:41.434 [main] INFO  com.solvd.metro.Main - Passenger: Giga | Ticket price: 2.50
+15:02:41.435 [main] INFO  com.solvd.metro.Main - Passenger: John | Ticket price: 3.50
+15:02:41.435 [main] INFO  com.solvd.metro.Main - Train status: Active -> 101
+15:02:41.436 [main] INFO  com.solvd.metro.Main - Train status: Under Maintenance -> 102
+15:02:41.436 [main] INFO  com.solvd.metro.Main - --- Runnable Tasks ---
+15:02:41.437 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+15:02:41.437 [main] INFO  com.solvd.metro.Main - Checking all train statuses...
+15:02:41.437 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+15:02:41.437 [main] INFO  com.solvd.metro.service.MetroService - Starting task...
+15:02:41.440 [main] INFO  com.solvd.metro.service.MetroService - Task finished.
+15:02:41.440 [main] INFO  com.solvd.metro.Main - --- Trains with capacity >= 60 ---
+15:02:41.440 [main] INFO  com.solvd.metro.Main - 102 capacity: 80
+15:02:41.441 [main] INFO  com.solvd.metro.Main - --- Train Summaries ---
+15:02:41.444 [main] INFO  com.solvd.metro.Main - Train 101 | Capacity: 50 | Status: ACTIVE
+15:02:41.444 [main] INFO  com.solvd.metro.Main - Train 102 | Capacity: 80 | Status: MAINTENANCE
+15:02:41.444 [main] INFO  com.solvd.metro.Main - --- All Passengers ---
+15:02:41.445 [main] INFO  com.solvd.metro.service.MetroService - Passenger: John Seat: B2
+15:02:41.445 [main] INFO  com.solvd.metro.Main - --- Default Ticket Price ---
+15:02:41.446 [main] INFO  com.solvd.metro.Main - Default price: 1.5
+15:02:41.446 [main] INFO  com.solvd.metro.Main - --- Total Price with Service Fee ---
+15:02:41.447 [main] INFO  com.solvd.metro.Main - Total: 2.75
+15:02:41.447 [main] INFO  com.solvd.metro.Main - --- Filter Trains (caller decides) ---
+15:02:41.449 [main] INFO  com.solvd.metro.Main - Active train: 101
+15:02:41.450 [main] INFO  com.solvd.metro.Main - High capacity train: 102
+15:02:41.450 [main] INFO  com.solvd.metro.Main - Specific train: 101
+15:02:41.450 [main] INFO  com.solvd.metro.Main - --- Validate Tickets (caller decides) ---
+15:02:41.450 [main] INFO  com.solvd.metro.Main - Ticket1 valid? false
+15:02:41.451 [main] INFO  com.solvd.metro.Main - Ticket2 valid? true
+15:02:41.451 [main] INFO  com.solvd.metro.Main - --- Passenger Actions (caller decides) ---
+15:02:41.452 [main] INFO  com.solvd.metro.Main - Boarding: John
+15:02:41.452 [main] INFO  com.solvd.metro.Main - Checking ticket for: John
+15:02:41.452 [main] INFO  com.solvd.metro.Main - --- System Info ---
+15:02:41.453 [main] INFO  com.solvd.metro.service.ReflectionService - Reflection Info: Train
+15:02:41.455 [main] INFO  com.solvd.metro.service.ReflectionService - Description: Represents a metro train
+15:02:41.455 [main] INFO  com.solvd.metro.service.ReflectionService - Author: Giga
+15:02:41.455 [main] INFO  com.solvd.metro.service.ReflectionService - -- Fields --
+15:02:41.456 [main] INFO  com.solvd.metro.service.ReflectionService - Field: trainNumber | Type: int | Modifier: private
+15:02:41.456 [main] INFO  com.solvd.metro.service.ReflectionService - Annotation: Unique train number
+15:02:41.456 [main] INFO  com.solvd.metro.service.ReflectionService - Field: capacity | Type: int | Modifier: private
+15:02:41.456 [main] INFO  com.solvd.metro.service.ReflectionService - Field: driver | Type: Driver | Modifier: private
+15:02:41.457 [main] INFO  com.solvd.metro.service.ReflectionService - Field: speed | Type: Speed | Modifier: private
+15:02:41.457 [main] INFO  com.solvd.metro.service.ReflectionService - Field: status | Type: TrainStatus | Modifier: private
+15:02:41.457 [main] INFO  com.solvd.metro.service.ReflectionService - -- Constructors --
+15:02:41.457 [main] INFO  com.solvd.metro.service.ReflectionService - Constructor: com.solvd.metro.model.Train | Parameters: 0
+15:02:41.457 [main] INFO  com.solvd.metro.service.ReflectionService - -- Methods --
+15:02:41.457 [main] INFO  com.solvd.metro.service.ReflectionService - Method: equals | Return type: boolean | Modifier: public
+15:02:41.457 [main] INFO  com.solvd.metro.service.ReflectionService - Method: toString | Return type: String | Modifier: public
+15:02:41.458 [main] INFO  com.solvd.metro.service.ReflectionService - Method: hashCode | Return type: int | Modifier: public
+15:02:41.458 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getId | Return type: int | Modifier: public
+15:02:41.458 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getType | Return type: String | Modifier: public
+15:02:41.458 [main] INFO  com.solvd.metro.service.ReflectionService - Annotation: Returns train type
+15:02:41.458 [main] INFO  com.solvd.metro.service.ReflectionService - Method: move | Return type: void | Modifier: public
+15:02:41.458 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setTrainNumber | Return type: void | Modifier: public
+15:02:41.458 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setCapacity | Return type: void | Modifier: public
+15:02:41.459 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getTrainNumber | Return type: int | Modifier: public
+15:02:41.459 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getCapacity | Return type: int | Modifier: public
+15:02:41.459 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getSpeedObject | Return type: Speed | Modifier: public
+15:02:41.459 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setSpeed | Return type: void | Modifier: public
+15:02:41.459 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setStatus | Return type: void | Modifier: public
+15:02:41.459 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getStatus | Return type: TrainStatus | Modifier: public
+15:02:41.459 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getSpeed | Return type: int | Modifier: public
+15:02:41.459 [main] INFO  com.solvd.metro.service.ReflectionService - Method: getDriver | Return type: Driver | Modifier: public
+15:02:41.460 [main] INFO  com.solvd.metro.service.ReflectionService - Method: setDriver | Return type: void | Modifier: public
+15:02:41.464 [main] INFO  com.solvd.metro.service.ReflectionService - Train number via reflection: 999
+15:02:41.464 [main] INFO  com.solvd.metro.service.ReflectionService - Train type via reflection: Train
+15:02:41.465 [main] INFO  com.solvd.metro.Main - Train created via reflection: 999
+15:02:41.465 [main] INFO  com.solvd.metro.Main - Train type: Train
+15:02:41.465 [main] INFO  com.solvd.metro.Main - Train number: 999
+15:02:41.561 [main] INFO  com.solvd.metro.service.WordCountService - Total unique words: 7235
+15:02:41.562 [main] INFO  com.solvd.metro.service.WordCountService - Result written to: src/main/resources/result.txt
+15:02:41.563 [Thread-0] INFO  com.solvd.metro.service.ThreadDemo - Checking status of train: Train 101 on thread: Thread-0
+15:02:41.563 [Thread-1] INFO  com.solvd.metro.service.ThreadDemo - Passenger Giga boarding on thread: Thread-1
+15:02:41.563 [main] INFO  com.solvd.metro.Main - --- Connection Pool Demo ---
+15:02:41.566 [main] INFO  com.solvd.metro.service.ConnectionPool - Connection pool initialized with 5 connections
+15:02:41.569 [pool-2-thread-1] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 1 trying to get connection...
+15:02:41.569 [pool-2-thread-2] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 2 trying to get connection...
+15:02:41.569 [pool-2-thread-7] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 7 trying to get connection...
+15:02:41.569 [pool-2-thread-5] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 5 trying to get connection...
+15:02:41.569 [pool-2-thread-6] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 6 trying to get connection...
+15:02:41.569 [pool-2-thread-4] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 4 trying to get connection...
+15:02:41.570 [pool-2-thread-2] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-2 waiting for connection...
+15:02:41.570 [pool-2-thread-5] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-5 waiting for connection...
+15:02:41.570 [pool-2-thread-6] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-6 waiting for connection...
+15:02:41.570 [pool-2-thread-7] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-7 waiting for connection...
+15:02:41.570 [pool-2-thread-4] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-4 waiting for connection...
+15:02:41.569 [pool-2-thread-3] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 3 trying to get connection...
+15:02:41.570 [pool-2-thread-5] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-5 got Connection{id=2}
+15:02:41.570 [pool-2-thread-7] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-7 got Connection{id=4}
+15:02:41.570 [pool-2-thread-2] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-2 got Connection{id=1}
+15:02:41.570 [pool-2-thread-3] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-3 waiting for connection...
+15:02:41.570 [pool-2-thread-6] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-6 got Connection{id=3}
+15:02:41.570 [pool-2-thread-4] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-4 got Connection{id=5}
+15:02:41.570 [pool-2-thread-1] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-1 waiting for connection...
+15:02:41.571 [pool-2-thread-4] INFO  com.solvd.metro.service.AccountDao - [Connection{id=5}] Creating account: Account-4
+15:02:41.571 [pool-2-thread-2] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Creating account: Account-2
+15:02:41.571 [pool-2-thread-6] INFO  com.solvd.metro.service.AccountDao - [Connection{id=3}] Creating account: Account-6
+15:02:41.572 [pool-2-thread-2] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Getting account with id: 2
+15:02:41.572 [pool-2-thread-6] INFO  com.solvd.metro.service.AccountDao - [Connection{id=3}] Getting account with id: 6
+15:02:41.572 [pool-2-thread-4] INFO  com.solvd.metro.service.AccountDao - [Connection{id=5}] Getting account with id: 4
+15:02:41.571 [pool-2-thread-5] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Creating account: Account-5
+15:02:41.572 [pool-2-thread-2] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Updating account id: 2 with name: UpdatedName-2
+15:02:41.571 [pool-2-thread-7] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Creating account: Account-7
+15:02:41.572 [pool-2-thread-2] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Deleting account with id: 2
+15:02:41.572 [pool-2-thread-7] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Getting account with id: 7
+15:02:41.572 [pool-2-thread-6] INFO  com.solvd.metro.service.AccountDao - [Connection{id=3}] Updating account id: 6 with name: UpdatedName-6
+15:02:41.572 [pool-2-thread-6] INFO  com.solvd.metro.service.AccountDao - [Connection{id=3}] Deleting account with id: 6
+15:02:41.572 [pool-2-thread-7] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Updating account id: 7 with name: UpdatedName-7
+15:02:41.572 [pool-2-thread-5] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Getting account with id: 5
+15:02:41.573 [pool-2-thread-7] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Deleting account with id: 7
+15:02:41.572 [pool-2-thread-4] INFO  com.solvd.metro.service.AccountDao - [Connection{id=5}] Updating account id: 4 with name: UpdatedName-4
+15:02:41.573 [pool-2-thread-5] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Updating account id: 5 with name: UpdatedName-5
+15:02:41.573 [pool-2-thread-4] INFO  com.solvd.metro.service.AccountDao - [Connection{id=5}] Deleting account with id: 4
+15:02:41.573 [pool-2-thread-5] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Deleting account with id: 5
+15:02:43.598 [pool-2-thread-2] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-2 released Connection{id=1}
+15:02:43.598 [pool-2-thread-3] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-3 got Connection{id=1}
+15:02:43.598 [pool-2-thread-1] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-1 got Connection{id=2}
+15:02:43.598 [pool-2-thread-4] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-4 released Connection{id=5}
+15:02:43.598 [pool-2-thread-5] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-5 released Connection{id=2}
+15:02:43.598 [pool-2-thread-7] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-7 released Connection{id=4}
+15:02:43.598 [pool-2-thread-6] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-6 released Connection{id=3}
+15:02:43.598 [pool-2-thread-3] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Creating account: Account-3
+15:02:43.598 [pool-2-thread-1] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Creating account: Account-1
+15:02:43.598 [pool-2-thread-1] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Getting account with id: 1
+15:02:43.598 [pool-2-thread-3] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Getting account with id: 3
+15:02:43.599 [pool-2-thread-1] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Updating account id: 1 with name: UpdatedName-1
+15:02:43.599 [pool-2-thread-3] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Updating account id: 3 with name: UpdatedName-3
+15:02:43.599 [pool-2-thread-1] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Deleting account with id: 1
+15:02:43.599 [pool-2-thread-3] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Deleting account with id: 3
+15:02:45.608 [pool-2-thread-1] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-1 released Connection{id=2}
+15:02:45.608 [pool-2-thread-3] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-3 released Connection{id=1}
+15:02:45.609 [main] INFO  com.solvd.metro.service.ConnectionPoolDemo - All tasks completed. Available connections: 5
+15:03:09.547 [main] INFO  com.solvd.metro.Main - --- Connection Pool Demo ---
+15:03:09.547 [main] INFO  com.solvd.metro.service.ConnectionPool - Connection pool initialized with 5 connections
+15:03:09.547 [pool-2-thread-3] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 3 trying to get connection...
+15:03:09.547 [pool-2-thread-2] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 2 trying to get connection...
+15:03:09.561 [pool-2-thread-2] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-2 waiting for connection...
+15:03:09.561 [pool-2-thread-6] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 6 trying to get connection...
+15:03:09.561 [pool-2-thread-6] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-6 waiting for connection...
+15:03:09.547 [pool-2-thread-1] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 1 trying to get connection...
+15:03:09.561 [pool-2-thread-3] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-3 waiting for connection...
+15:03:09.562 [pool-2-thread-1] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-1 waiting for connection...
+15:03:09.561 [pool-2-thread-7] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 7 trying to get connection...
+15:03:09.562 [pool-2-thread-1] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-1 got Connection{id=4}
+15:03:09.562 [pool-2-thread-3] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-3 got Connection{id=3}
+15:03:09.547 [pool-2-thread-4] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 4 trying to get connection...
+15:03:09.562 [pool-2-thread-7] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-7 waiting for connection...
+15:03:09.562 [pool-2-thread-2] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-2 got Connection{id=1}
+15:03:09.562 [pool-2-thread-6] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-6 got Connection{id=2}
+15:03:09.562 [pool-2-thread-7] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-7 got Connection{id=5}
+15:03:09.562 [pool-2-thread-4] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-4 waiting for connection...
+15:03:09.561 [pool-2-thread-5] INFO  com.solvd.metro.service.ConnectionPoolDemo - Task 5 trying to get connection...
+15:03:09.562 [pool-2-thread-5] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-5 waiting for connection...
+15:03:09.563 [pool-2-thread-3] INFO  com.solvd.metro.service.AccountDao - [Connection{id=3}] Creating account: Account-3
+15:03:09.563 [pool-2-thread-2] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Creating account: Account-2
+15:03:09.563 [pool-2-thread-6] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Creating account: Account-6
+15:03:09.563 [pool-2-thread-3] INFO  com.solvd.metro.service.AccountDao - [Connection{id=3}] Getting account with id: 3
+15:03:09.563 [pool-2-thread-1] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Creating account: Account-1
+15:03:09.563 [pool-2-thread-2] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Getting account with id: 2
+15:03:09.563 [pool-2-thread-7] INFO  com.solvd.metro.service.AccountDao - [Connection{id=5}] Creating account: Account-7
+15:03:09.563 [pool-2-thread-1] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Getting account with id: 1
+15:03:09.563 [pool-2-thread-7] INFO  com.solvd.metro.service.AccountDao - [Connection{id=5}] Getting account with id: 7
+15:03:09.563 [pool-2-thread-3] INFO  com.solvd.metro.service.AccountDao - [Connection{id=3}] Updating account id: 3 with name: UpdatedName-3
+15:03:09.563 [pool-2-thread-1] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Updating account id: 1 with name: UpdatedName-1
+15:03:09.563 [pool-2-thread-6] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Getting account with id: 6
+15:03:09.564 [pool-2-thread-7] INFO  com.solvd.metro.service.AccountDao - [Connection{id=5}] Updating account id: 7 with name: UpdatedName-7
+15:03:09.564 [pool-2-thread-3] INFO  com.solvd.metro.service.AccountDao - [Connection{id=3}] Deleting account with id: 3
+15:03:09.564 [pool-2-thread-1] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Deleting account with id: 1
+15:03:09.563 [pool-2-thread-2] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Updating account id: 2 with name: UpdatedName-2
+15:03:09.564 [pool-2-thread-7] INFO  com.solvd.metro.service.AccountDao - [Connection{id=5}] Deleting account with id: 7
+15:03:09.564 [pool-2-thread-6] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Updating account id: 6 with name: UpdatedName-6
+15:03:09.564 [pool-2-thread-2] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Deleting account with id: 2
+15:03:09.564 [pool-2-thread-6] INFO  com.solvd.metro.service.AccountDao - [Connection{id=2}] Deleting account with id: 6
+15:03:11.567 [pool-2-thread-2] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-2 released Connection{id=1}
+15:03:11.567 [pool-2-thread-1] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-1 released Connection{id=4}
+15:03:11.567 [pool-2-thread-3] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-3 released Connection{id=3}
+15:03:11.567 [pool-2-thread-4] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-4 got Connection{id=1}
+15:03:11.567 [pool-2-thread-5] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-5 got Connection{id=4}
+15:03:11.567 [pool-2-thread-7] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-7 released Connection{id=5}
+15:03:11.567 [pool-2-thread-6] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-6 released Connection{id=2}
+15:03:11.568 [pool-2-thread-4] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Creating account: Account-4
+15:03:11.568 [pool-2-thread-5] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Creating account: Account-5
+15:03:11.568 [pool-2-thread-4] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Getting account with id: 4
+15:03:11.568 [pool-2-thread-5] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Getting account with id: 5
+15:03:11.568 [pool-2-thread-4] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Updating account id: 4 with name: UpdatedName-4
+15:03:11.568 [pool-2-thread-5] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Updating account id: 5 with name: UpdatedName-5
+15:03:11.568 [pool-2-thread-4] INFO  com.solvd.metro.service.AccountDao - [Connection{id=1}] Deleting account with id: 4
+15:03:11.568 [pool-2-thread-5] INFO  com.solvd.metro.service.AccountDao - [Connection{id=4}] Deleting account with id: 5
+15:03:13.576 [pool-2-thread-4] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-4 released Connection{id=1}
+15:03:13.576 [pool-2-thread-5] INFO  com.solvd.metro.service.ConnectionPool - pool-2-thread-5 released Connection{id=4}
+15:03:13.577 [main] INFO  com.solvd.metro.service.ConnectionPoolDemo - All tasks completed. Available connections: 5
