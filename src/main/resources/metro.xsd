@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="metroSystem">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="train" type="TrainType" maxOccurs="unbounded"/>
+                <xs:element name="passenger" type="PassengerType" maxOccurs="unbounded"/>
+                <xs:element name="station" type="StationType" maxOccurs="unbounded"/>
+                <xs:element name="ticket" type="TicketType" maxOccurs="unbounded"/>
+                <xs:element name="line" type="LineType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="TrainType">
+        <xs:sequence>
+            <xs:element name="trainNumber" type="xs:integer"/>
+            <xs:element name="capacity" type="xs:integer"/>
+            <xs:element name="status" type="xs:string"/>
+            <xs:element name="available" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PassengerType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="seatNumber" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="StationType">
+        <xs:sequence>
+            <xs:element name="location" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="stationType" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TicketType">
+        <xs:sequence>
+            <xs:element name="price" type="xs:decimal"/>
+            <xs:element name="purchaseTime" type="xs:dateTime"/>
+            <xs:element name="available" type="xs:boolean"/>
+            <xs:element name="ticketType" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LineType">
+        <xs:sequence>
+            <xs:element name="lineName" type="xs:string"/>
+            <xs:element name="distance" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

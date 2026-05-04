@@ -1,0 +1,62 @@
+{
+  "trains": [
+    {
+      "trainNumber": 101,
+      "capacity": 50,
+      "status": "ACTIVE",
+      "available": true
+    },
+    {
+      "trainNumber": 102,
+      "capacity": 80,
+      "status": "MAINTENANCE",
+      "available": false
+    }
+  ],
+  "passengers": [
+    {
+      "name": "Giga",
+      "seatNumber": "A1"
+    },
+    {
+      "name": "John",
+      "seatNumber": "B2"
+    }
+  ],
+  "stations": [
+    {
+      "location": "Central Station",
+      "city": "Tbilisi",
+      "stationType": "TERMINAL"
+    },
+    {
+      "location": "North Station",
+      "city": "Tbilisi",
+      "stationType": "JUNCTION"
+    }
+  ],
+  "tickets": [
+    {
+      "price": 2.50,
+      "purchaseTime": "2024-01-15T10:30:00",
+      "available": true,
+      "ticketType": "SINGLE"
+    },
+    {
+      "price": 3.50,
+      "purchaseTime": "2024-01-15T11:00:00",
+      "available": false,
+      "ticketType": "MONTHLY"
+    }
+  ],
+  "lines": [
+    {
+      "lineName": "Red Line",
+      "distance": 12.5
+    },
+    {
+      "lineName": "Blue Line",
+      "distance": 8.3
+    }
+  ]
+}
