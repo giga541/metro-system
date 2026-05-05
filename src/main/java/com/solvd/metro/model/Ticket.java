@@ -3,22 +3,25 @@ package com.solvd.metro.model;
 import com.solvd.metro.enums.TicketType;
 import com.solvd.metro.interfaces.Bookable;
 import com.solvd.metro.interfaces.Payable;
-import com.solvd.metro.service.Booking;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import com.solvd.metro.parser.LocalDateTimeAdapter;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Ticket implements Bookable, Payable {
 
     private static final Logger logger = LogManager.getLogger(Ticket.class);
 
     private BigDecimal price;
+    @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
     private LocalDateTime purchaseTime;
     private boolean available = true;
-    ;
-
     @Override
     public void book() {
         this.available = false;

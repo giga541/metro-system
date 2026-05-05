@@ -7,6 +7,11 @@ import com.solvd.metro.exception.TrainNotFoundException;
 import com.solvd.metro.interfaces.Bookable;
 import com.solvd.metro.interfaces.Identifiable;
 import com.solvd.metro.model.*;
+import com.solvd.metro.parser.MetroJacksonParser;
+import com.solvd.metro.parser.MetroJaxbParser;
+import com.solvd.metro.parser.MetroSaxParser;
+import com.solvd.metro.parser.Parser;
+import com.solvd.metro.model.MetroSystemDto;
 import com.solvd.metro.records.TrainSchedule;
 import com.solvd.metro.service.*;
 import org.apache.logging.log4j.LogManager;
@@ -328,5 +333,36 @@ public class Main {
         // CompletableFutures
         logger.info("--- CompletableFuture Demo ---");
         CompletableFutureDemo.run();
+
+        // SAX
+        try {
+            logger.info("--- SAX Parser ---");
+            Parser saxParser = new MetroSaxParser();
+            MetroSystemDto saxResult = saxParser.parse("src/main/resources/metro.xml");
+            saxResult.getTrains().forEach(t -> logger.info("Train: {}", t.getTrainNumber()));
+            saxResult.getPassengers().forEach(p -> logger.info("Passenger: {}", p.getName()));
+        } catch (Exception e) {
+            logger.error("SAX Parser error: {}", e.getMessage());
+        }
+
+        // JAXB
+        try {
+            logger.info("--- JAXB Parser ---");
+            Parser jaxbParser = new MetroJaxbParser();
+            MetroSystemDto jaxbResult = jaxbParser.parse("src/main/resources/metro.xml");
+            jaxbResult.getTrains().forEach(t -> logger.info("Train: {}", t.getTrainNumber()));
+        } catch (Exception e) {
+            logger.error("JAXB Parser error: {}", e.getMessage());
+        }
+
+        //Jackson
+        try {
+            logger.info("--- Jackson Parser ---");
+            Parser jacksonParser = new MetroJacksonParser();
+            MetroSystemDto jacksonResult = jacksonParser.parse("src/main/resources/metro.json");
+            jacksonResult.getTrains().forEach(t -> logger.info("Train: {}", t.getTrainNumber()));
+        } catch (Exception e) {
+            logger.error("Jackson Parser error: {}", e.getMessage());
+        }
     }
 }
