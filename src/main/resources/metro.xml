@@ -1,64 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metroSystem>
 
-    <train>
-        <trainNumber>101</trainNumber>
-        <capacity>50</capacity>
-        <status>ACTIVE</status>
-        <available>true</available>
-    </train>
+    <trains>
+        <train>
+            <trainNumber>101</trainNumber>
+            <capacity>50</capacity>
+            <status>ACTIVE</status>
+            <available>true</available>
+        </train>
 
-    <train>
-        <trainNumber>102</trainNumber>
-        <capacity>80</capacity>
-        <status>MAINTENANCE</status>
-        <available>false</available>
-    </train>
+        <train>
+            <trainNumber>102</trainNumber>
+            <capacity>80</capacity>
+            <status>MAINTENANCE</status>
+            <available>false</available>
+        </train>
+    </trains>
 
-    <passenger>
-        <name>Giga</name>
-        <seatNumber>A1</seatNumber>
-    </passenger>
+    <passengers>
 
-    <passenger>
-        <name>John</name>
-        <seatNumber>B2</seatNumber>
-    </passenger>
+        <passenger>
+            <name>Giga</name>
+            <seatNumber>A1</seatNumber>
+        </passenger>
 
-    <station>
-        <location>Central Station</location>
-        <city>Tbilisi</city>
-        <stationType>TERMINAL</stationType>
-    </station>
+        <passenger>
+            <name>John</name>
+            <seatNumber>B2</seatNumber>
+        </passenger>
+    </passengers>
 
-    <station>
-        <location>North Station</location>
-        <city>Tbilisi</city>
-        <stationType>JUNCTION</stationType>
-    </station>
+    <stations>
 
-    <ticket>
-        <price>2.50</price>
-        <purchaseTime>2024-01-15T10:30:00</purchaseTime>
-        <available>true</available>
-        <ticketType>SINGLE</ticketType>
-    </ticket>
+        <station>
+            <location>Central Station</location>
+            <city>Tbilisi</city>
+            <stationType>TERMINAL</stationType>
+        </station>
 
-    <ticket>
-        <price>3.50</price>
-        <purchaseTime>2024-01-15T11:00:00</purchaseTime>
-        <available>false</available>
-        <ticketType>MONTHLY</ticketType>
-    </ticket>
+        <station>
+            <location>North Station</location>
+            <city>Tbilisi</city>
+            <stationType>JUNCTION</stationType>
+        </station>
+    </stations>
 
-    <line>
-        <lineName>Red Line</lineName>
-        <distance>12.5</distance>
-    </line>
+    <tickets>
+        <ticket>
+            <price>2.50</price>
+            <purchaseTime>2024-01-15T10:30:00</purchaseTime>
+            <available>true</available>
+            <ticketType>SINGLE</ticketType>
+        </ticket>
 
-    <line>
-        <lineName>Blue Line</lineName>
-        <distance>8.3</distance>
-    </line>
+        <ticket>
+            <price>3.50</price>
+            <purchaseTime>2024-01-15T11:00:00</purchaseTime>
+            <available>false</available>
+            <ticketType>MONTHLY</ticketType>
+        </ticket>
+    </tickets>
+
+    <lines>
+        <line>
+            <lineName>Red Line</lineName>
+            <distance>12.5</distance>
+        </line>
+
+        <line>
+            <lineName>Blue Line</lineName>
+            <distance>8.3</distance>
+        </line>
+    </lines>
 
 </metroSystem>

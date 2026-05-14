@@ -4,11 +4,41 @@
     <xs:element name="metroSystem">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="train" type="TrainType" maxOccurs="unbounded"/>
-                <xs:element name="passenger" type="PassengerType" maxOccurs="unbounded"/>
-                <xs:element name="station" type="StationType" maxOccurs="unbounded"/>
-                <xs:element name="ticket" type="TicketType" maxOccurs="unbounded"/>
-                <xs:element name="line" type="LineType" maxOccurs="unbounded"/>
+                <xs:element name="trains">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="train" type="TrainType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="passengers">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="passenger" type="PassengerType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="stations">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="station" type="StationType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tickets">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ticket" type="TicketType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="lines">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="line" type="LineType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

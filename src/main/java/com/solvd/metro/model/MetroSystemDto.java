@@ -1,9 +1,6 @@
 package com.solvd.metro.model;
 
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,18 +9,23 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MetroSystemDto {
 
+    @XmlElementWrapper(name = "trains")
     @XmlElement(name = "train")
     private List<Train> trains = new ArrayList<>();
 
+    @XmlElementWrapper(name = "passengers")
     @XmlElement(name = "passenger")
     private List<Passenger> passengers = new ArrayList<>();
 
+    @XmlElementWrapper(name = "stations")
     @XmlElement(name = "station")
     private List<Station> stations = new ArrayList<>();
 
+    @XmlElementWrapper(name = "tickets")
     @XmlElement(name = "ticket")
     private List<Ticket> tickets = new ArrayList<>();
 
+    @XmlElementWrapper(name = "lines")
     @XmlElement(name = "line")
     private List<Line> lines = new ArrayList<>();
 
